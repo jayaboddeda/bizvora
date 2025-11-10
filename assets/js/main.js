@@ -135,43 +135,55 @@ Progressbar js
 	});
 
 	////////////////////////////////////////////////////
-	// Mobile Menu Js
-	$(".mobile_menu_bar").on("click", function () {
+	// Mobile Menu Initialization Function
+	function initMobileMenu() {
+		// Initialize meanmenu if element exists
+		if ($("#mobile-menu").length && !$("#mobile-menu").data("meanmenu-initialized")) {
+			$("#mobile-menu").meanmenu({
+				meanMenuContainer: ".mobile_menu",
+				meanScreenWidth: "991",
+				meanExpand: ['<i class="tji-arrow-down"></i>'],
+			});
+			$("#mobile-menu").data("meanmenu-initialized", true);
+		}
+	}
+
+	// Initialize on page load (in case header is already loaded)
+	initMobileMenu();
+
+	// Hamburger Menu Js - Use event delegation for dynamically loaded content
+	$(document).on("click", ".mobile_menu_bar", function () {
 		$(this).toggleClass("on");
-	});
-
-	// Mobile Menu Js
-	$("#mobile-menu").meanmenu({
-		meanMenuContainer: ".mobile_menu",
-		meanScreenWidth: "991",
-		meanExpand: ['<i class="tji-arrow-down"></i>'],
-	});
-
-	// Hamburger Menu Js
-	$(".mobile_menu_bar").on("click", function () {
-		$(".hamburger-area").addClass("opened");
-		$(".body-overlay").addClass("opened");
+		$(".hamburger-area").toggleClass("opened");
+		$(".body-overlay").toggleClass("opened");
 		$("body").toggleClass("overflow-hidden");
 	});
 
 	// Offcanvas js
-	$(".menu_offcanvas").on("click", function () {
+	$(document).on("click", ".menu_offcanvas", function () {
 		$(".tj-offcanvas-area").toggleClass("opened");
 		$(".body-overlay").addClass("opened");
 		$("body").toggleClass("overflow-hidden");
 	});
-	$(".hamburger_close_btn").on("click", function () {
+	
+	$(document).on("click", ".hamburger_close_btn", function () {
 		$(".tj-offcanvas-area").removeClass("opened");
 		$(".hamburger-area").removeClass("opened");
 		$(".body-overlay").removeClass("opened");
-		$("body").toggleClass("overflow-hidden");
+		$(".mobile_menu_bar").removeClass("on");
+		$("body").removeClass("overflow-hidden");
 	});
-	$(".body-overlay").on("click", function () {
+	
+	$(document).on("click", ".body-overlay", function () {
 		$(".tj-offcanvas-area").removeClass("opened");
 		$(".hamburger-area").removeClass("opened");
 		$(".body-overlay").removeClass("opened");
-		$("body").toggleClass("overflow-hidden");
+		$(".mobile_menu_bar").removeClass("on");
+		$("body").removeClass("overflow-hidden");
 	});
+
+	// Export function to be called after header loads
+	window.initMobileMenu = initMobileMenu;
 
 	////////////////////////////////////////////////////
 	// Search Bar Js

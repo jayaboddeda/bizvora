@@ -102,6 +102,14 @@
       
       // Set active menu item after header is loaded
       setActiveMenuItem();
+      
+      // Initialize mobile menu after header is loaded
+      if (window.initMobileMenu && typeof window.initMobileMenu === 'function') {
+        // Use setTimeout to ensure DOM is fully updated
+        setTimeout(function() {
+          window.initMobileMenu();
+        }, 100);
+      }
     });
   }
 
