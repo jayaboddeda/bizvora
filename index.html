@@ -93,6 +93,134 @@
         font-size: 18px;
       }
     }
+
+    /* Partner Logos Scrolling Section */
+    .tj-partner-logos-section {
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+    .partner-logos-wrapper {
+      margin-top: 50px;
+    }
+    .partner-logos-row {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .partner-logos-row:last-child {
+      margin-bottom: 0;
+    }
+    .partner-logos-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 60px;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      will-change: transform;
+    }
+    .partner-logos-row-1 .partner-logos-track {
+      animation-name: scroll-right;
+      animation-duration: 50s;
+    }
+    .partner-logos-row-2 .partner-logos-track {
+      animation-name: scroll-left;
+      animation-duration: 50s;
+    }
+    .partner-logo-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      padding: 15px 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .partner-logo-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+    .partner-logo-item img {
+      max-width: 100%;
+      max-height: 70px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+    .partner-logo-item:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    .partner-logo-item .logo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      text-align: center;
+      line-height: 1.2;
+    }
+    @keyframes scroll-right {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+    @keyframes scroll-left {
+      from {
+        transform: translateX(-50%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+    @media (max-width: 991px) {
+      .partner-logo-item {
+        width: 150px;
+        height: 90px;
+        padding: 12px 15px;
+      }
+      .partner-logos-track {
+        gap: 40px;
+      }
+    }
+    @media (max-width: 767px) {
+      .tj-partner-logos-section {
+        padding: 60px 0;
+      }
+      .partner-logos-wrapper {
+        margin-top: 30px;
+      }
+      .partner-logo-item {
+        width: 120px;
+        height: 80px;
+        padding: 10px 12px;
+      }
+      .partner-logos-track {
+        gap: 30px;
+      }
+      .partner-logo-item img {
+        max-height: 50px;
+      }
+      .partner-logos-row-1 .partner-logos-track,
+      .partner-logos-row-2 .partner-logos-track {
+        animation-duration: 30s;
+      }
+    }
   </style>
 </head>
 
@@ -486,6 +614,235 @@
           </div>
         </section>
         <!-- end: Our Clients Section -->
+
+        <!-- start: Partner Logos Section -->
+        <section class="tj-partner-logos-section section-gap section-gap-x rounded-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-wrap-content">
+                  <div class="sec-heading style-4">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-award"></i>Our Partners</span>
+                    <h4 class="sec-title title-anim">Trusted by leading brands across industries</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="partner-logos-wrapper">
+            <!-- Row 1: Scrolling Right -->
+            <div class="partner-logos-row partner-logos-row-1">
+              <div class="partner-logos-track">
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="HIRAWATS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">HIRAWATS</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="CARPET KING" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">CARPET KING</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="TRYB" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">TRYB</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="Manbhum" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Manbhum</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="Karlan CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Karlan</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="5am fresh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">5am fresh</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="CMR SHOPPING MALL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">CMR MALL</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="R.S. Brothers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">R.S. Brothers</div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="HIRAWATS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">HIRAWATS</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="CARPET KING" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">CARPET KING</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="TRYB" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">TRYB</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="Manbhum" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Manbhum</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="Karlan CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Karlan</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="5am fresh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">5am fresh</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="CMR SHOPPING MALL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">CMR MALL</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="R.S. Brothers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">R.S. Brothers</div>
+                </div>
+              </div>
+            </div>
+            <!-- Row 2: Scrolling Left -->
+            <div class="partner-logos-row partner-logos-row-2">
+              <div class="partner-logos-track">
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="VALUE ZONE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">VALUE ZONE</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="FLOOR DADDY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">FLOOR DADDY</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="Healthy Home Flooring" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Healthy Home</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="GOLD'S GYM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">GOLD'S GYM</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="NOVUS CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">NOVUS</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="M.V.V BUILDERS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">M.V.V BUILDERS</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="AYAANSH INFRASTRUCTURE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">AYAANSH</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="LUCID MEDICAL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">LUCID</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="VALUE ZONE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">VALUE ZONE</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="FLOOR DADDY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">FLOOR DADDY</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="Healthy Home Flooring" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Healthy Home</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="GOLD'S GYM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">GOLD'S GYM</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="NOVUS CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">NOVUS</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="M.V.V BUILDERS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">M.V.V BUILDERS</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="AYAANSH INFRASTRUCTURE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">AYAANSH</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="LUCID MEDICAL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">LUCID</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                </div>
+                <div class="partner-logo-item">
+                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: Partner Logos Section -->
 
         <!-- start: Service Section -->
         <section class="h9-service section-gap  section-gap-x tj-sticky-panel-container-2 tj-progress-wrapper d-none">
