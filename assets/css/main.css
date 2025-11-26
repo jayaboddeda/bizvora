@@ -13680,6 +13680,34 @@ START: Theme Slider CSS
   border-radius: 16px;
   overflow: hidden;
 }
+.tj-slider-section .hero-slider {
+  height: 92.5vh;
+  position: relative;
+}
+.tj-slider-section .hero-slider .swiper-wrapper {
+  height: 100%;
+}
+.tj-slider-section .hero-slider .swiper-slide {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .tj-slider-section .hero-slider {
+    height: 95vh;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tj-slider-section .hero-slider {
+    height: auto;
+    min-height: 92.5vh;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .tj-slider-section .hero-slider {
+    height: 70vh;
+  }
+}
 .tj-slider-section .banner-scroll {
   inset-inline-start: 60px;
   bottom: 60px;
@@ -13711,10 +13739,16 @@ START: Theme Slider CSS
 }
 
 .tj-slider-item {
+  height: 100%;
   min-height: 92.5vh;
   background-color: #0c1e21;
   position: relative;
   z-index: 1;
+}
+.tj-slider-item .container {
+  height: 100%;
+  position: relative;
+  z-index: 3;
 }
 .tj-slider-item::after {
   position: absolute;
@@ -13724,13 +13758,15 @@ START: Theme Slider CSS
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgb(12, 30, 33)), color-stop(60%, rgba(12, 30, 33, 0.4)), to(rgba(12, 30, 33, 0.1)));
-  background: linear-gradient(90deg, rgb(12, 30, 33) 20%, rgba(12, 30, 33, 0.4) 60%, rgba(12, 30, 33, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(12, 30, 33, 0.85) 0%, rgba(12, 30, 33, 0.6) 50%, rgba(12, 30, 33, 0.4) 100%);
 }
 .tj-slider-item .slider-wrapper {
   padding: 195px 0 347px;
   position: relative;
   z-index: 3;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .tj-slider-item .slider-wrapper {
@@ -13751,17 +13787,19 @@ START: Theme Slider CSS
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tj-slider-item .slider-wrapper {
-    padding: 150px 0 450px 0;
+    padding: 100px 0 200px 0;
   }
 }
 .tj-slider-item .slider-content {
   max-width: 660px;
+  position: relative;
+  z-index: 4;
 }
 .tj-slider-item .slider-content .slider-title {
   color: var(--tj-color-common-white);
-  font-size: 96px;
+  font-size: 72px;
   line-height: 1.042;
-  letter-spacing: -2.88px;
+  letter-spacing: -2.16px;
   margin-bottom: 10px;
 }
 .tj-slider-item .slider-content .slider-title span {
@@ -13795,17 +13833,17 @@ START: Theme Slider CSS
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 80px;
+    font-size: 60px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 70px;
+    font-size: 52px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tj-slider-item .slider-content .slider-title {
-    font-size: 50px;
+    font-size: 38px;
   }
 }
 .tj-slider-item .slider-content .slider-desc {
@@ -13834,12 +13872,12 @@ START: Theme Slider CSS
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tj-slider-item {
-    min-height: auto;
+    min-height: 92.5vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tj-slider-item {
-    min-height: 100vh;
+    min-height: 70vh;
   }
 }
 
@@ -13854,6 +13892,9 @@ START: Theme Slider CSS
   -webkit-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
+.swiper-slide:first-child .slider-content .slider-title,
+.swiper-slide:first-child .slider-content .slider-desc,
+.swiper-slide:first-child .slider-content .slider-btn,
 .swiper-slide.swiper-slide-active .slider-content .slider-title,
 .swiper-slide.swiper-slide-active .slider-content .slider-desc,
 .swiper-slide.swiper-slide-active .slider-content .slider-btn {
@@ -13883,6 +13924,9 @@ START: Theme Slider CSS
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .hero-thumb {
