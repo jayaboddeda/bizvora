@@ -17,6 +17,8 @@ class Cursor {
         this.body.append(this.el);
         this.bind();
         this.move(-window.innerWidth, -window.innerHeight, 0);
+        // Show cursor immediately on initialization
+        this.show();
     }
 
     bind() {
@@ -166,5 +168,7 @@ class Cursor {
     }
 }
 
-// Init cursor
-const cursor = new Cursor();
+// Init cursor after DOM is ready
+$(document).ready(function() {
+    const cursor = new Cursor();
+});
