@@ -26,10 +26,23 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <style>
     /* Client Cards Custom Styling */
+    .client-cards-slider .swiper-slide {
+      height: auto;
+    }
+    .client-cards-slider .project-item {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
     .client-cards-slider .project-item .project-img {
       position: relative;
-      height: 400px;
+      height: 250px;
       border-radius: 8px 8px 0 0;
+      flex-shrink: 0;
     }
     .client-cards-slider .project-item .project-content {
       position: relative;
@@ -43,6 +56,9 @@
       transform: none !important;
       background-color: #ffffff;
       text-shadow: none;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
     .client-cards-slider .project-item .project-content .title {
       color: var(--tj-color-text-heading);
@@ -63,7 +79,7 @@
     }
     @media (max-width: 991px) {
       .client-cards-slider .project-item .project-img {
-        height: 300px;
+        height: 220px;
       }
     }
     @media (max-width: 767px) {
@@ -71,7 +87,7 @@
         padding: 20px;
       }
       .client-cards-slider .project-item .project-img {
-        height: 280px;
+        height: 200px;
       }
       .client-cards-slider .project-item .project-content .title {
         font-size: 18px;
@@ -412,7 +428,7 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="assets/images/project/project-1.webp"></div>
+                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/south-india-shopping-mall.webp"></div>
                           <div class="project-content">
                             <h3 class="title">South India Shopping Mall: SEO & UI Overhaul</h3>
                             <p class="desc">Target - Fashion shoppers</p>
@@ -421,7 +437,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="assets/images/project/project-2.webp"></div>
+                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/kims-sunshine.webp"></div>
                           <div class="project-content">
                             <h3 class="title">KIMS Sunshine: Streamlined Web Maintenance</h3>
                             <p class="desc">Target - Healthcare seekers</p>
@@ -430,7 +446,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="assets/images/project/project-3.webp"></div>
+                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/sri-aishwarya-foods.webp"></div>
                           <div class="project-content">
                             <h3 class="title">Sri Aishwarya Foods: Growing Organic Reach</h3>
                             <p class="desc">Target - Organic rice buyers</p>
@@ -439,7 +455,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="assets/images/project/project-4.webp"></div>
+                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/sri-aishwarya-foods.webp"></div>
                           <div class="project-content">
                             <h3 class="title">Hirawats: Scaling E-Commerce with SEO</h3>
                             <p class="desc">Target - Medical buyers</p>
@@ -448,7 +464,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="assets/images/project/project-5.webp"></div>
+                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/ayaansh-infra.webp"></div>
                           <div class="project-content">
                             <h3 class="title">Ayaansh Infra: Digital Launch</h3>
                             <p class="desc">Target - Real estate buyers</p>

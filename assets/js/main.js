@@ -299,13 +299,12 @@ Progressbar js
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 2,
+					slidesPerView: 3,
+					spaceBetween: 25,
 				},
-				1024: {
-					slidesPerView: 2.2,
-				},
-				1400: {
-					slidesPerView: 2.31,
+				1200: {
+					slidesPerView: 4,
+					spaceBetween: 30,
 				},
 			},
 		});
