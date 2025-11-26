@@ -40,9 +40,9 @@
   --tj-color-text-body-3: #67787a;
   --tj-color-text-body-4: #18292c;
   --tj-color-text-body-5: rgba(255, 255, 255, 0.8);
-  --tj-color-theme-primary: #1e8a8a;
-  --tj-color-theme-bg: #d8e5e5;
-  --tj-color-theme-bg-2: #cee0e0;
+  --tj-color-theme-primary: #EC2B25;
+  --tj-color-theme-bg: #F5E5E4;
+  --tj-color-theme-bg-2: #F0D5D4;
   --tj-color-theme-bg-3: #202e30;
   --tj-color-theme-dark: #0c1e21;
   --tj-color-theme-dark-2: #18292c;
@@ -57,7 +57,7 @@
   --tj-color-border-2: #313d3d;
   --tj-color-border-3: rgba(255, 255, 255, 0.1490196078);
   --tj-color-border-4: rgba(255, 255, 255, 0.2);
-  --tj-color-border-5: rgba(30, 138, 138, 0.1490196078);
+  --tj-color-border-5: rgba(236, 43, 37, 0.1490196078);
 }
 
 /*----------------------------------------*/
