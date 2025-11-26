@@ -10915,33 +10915,40 @@ START: Project CSS
 
 .project-slider .project-item {
   position: relative;
-  min-height: 550px;
+  min-height: auto;
   overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .project-slider .project-item .project-img {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
-  inset-inline-start: 0;
-  top: 0;
+  height: 400px;
+  inset-inline-start: auto;
+  top: auto;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 .project-slider .project-item .project-content {
-  position: absolute;
-  inset-inline-start: 50%;
-  top: 50%;
-  bottom: inherit;
+  position: relative;
+  inset-inline-start: auto;
+  top: auto;
+  bottom: auto;
   width: 100%;
-  padding: 0 20px;
+  padding: 25px 20px;
   z-index: 3;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  visibility: hidden;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  opacity: 1;
+  visibility: visible;
+  background-color: #ffffff;
+  text-shadow: none;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -10959,27 +10966,28 @@ START: Project CSS
   background-color: var(--tj-color-theme-primary);
 }
 .project-slider .project-item .project-content .title {
-  color: var(--tj-color-common-white);
-  max-width: 350px;
-  margin: 0 auto;
-  text-align: center;
+  color: var(--tj-color-text-heading);
+  max-width: 100%;
+  margin: 0 0 8px 0;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-shadow: none;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .project-slider .project-item .project-content .title {
     font-size: 20px;
-    width: calc(100% - 70px);
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .project-slider .project-item .project-content .title {
     font-size: 20px;
-    width: calc(100% - 70px);
   }
 }
 @media (max-width: 575px) {
   .project-slider .project-item .project-content .title {
-    font-size: 20px;
-    width: calc(100% - 70px);
+    font-size: 18px;
   }
 }
 .project-slider .project-item .project-content .project-text {
@@ -11031,23 +11039,26 @@ START: Project CSS
 .project-slider .project-item:hover .project-img::before {
   opacity: 0.6;
 }
-.project-slider .project-item:hover .project-content {
-  opacity: 1;
-  visibility: visible;
+.project-slider .project-item .project-content .desc {
+  color: #666666;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: none;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
-  .project-slider .project-item {
-    min-height: 450px;
+  .project-slider .project-item .project-img {
+    height: 350px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .project-slider .project-item {
-    min-height: 400px;
+  .project-slider .project-item .project-img {
+    height: 300px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .project-slider .project-item {
-    min-height: 330px;
+  .project-slider .project-item .project-img {
+    height: 280px;
   }
 }
 

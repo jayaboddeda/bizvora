@@ -24,6 +24,60 @@
   <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
   <link rel="stylesheet" href="assets/css/meanmenu.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* Client Cards Custom Styling */
+    .client-cards-slider .project-item .project-img {
+      position: relative;
+      height: 400px;
+      border-radius: 8px 8px 0 0;
+    }
+    .client-cards-slider .project-item .project-content {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      width: 100%;
+      padding: 25px 20px;
+      z-index: 3;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      background-color: #ffffff;
+      text-shadow: none;
+    }
+    .client-cards-slider .project-item .project-content .title {
+      color: var(--tj-color-text-heading);
+      margin-bottom: 8px;
+      max-width: 100%;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: left;
+      text-shadow: none;
+    }
+    .client-cards-slider .project-item .project-content .desc {
+      color: #666666;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      text-shadow: none;
+    }
+    @media (max-width: 991px) {
+      .client-cards-slider .project-item .project-img {
+        height: 300px;
+      }
+    }
+    @media (max-width: 767px) {
+      .client-cards-slider .project-item .project-content {
+        padding: 20px;
+      }
+      .client-cards-slider .project-item .project-img {
+        height: 280px;
+      }
+      .client-cards-slider .project-item .project-content .title {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -335,6 +389,87 @@
                     </div>
                   </section>
                   <!-- end: About Section -->
+
+        <!-- start: Our Clients Section -->
+        <section class="tj-project-section-2 section-gap section-gap-x rounded-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-wrap-content">
+                  <div class="sec-heading style-4">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-award"></i>Our Clients</span>
+                    <h4 class="sec-title title-anim">Our success lies in the results we deliver. From real estate to e-commerce, we've helped brands grow through smart digital strategies. Explore how we turn ideas into impact.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="project-wrapper wow fadeInUp" data-wow-delay=".5s">
+                  <div class="swiper project-slider client-cards-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="project-item">
+                          <div class="project-img" data-bg-image="assets/images/project/project-1.webp"></div>
+                          <div class="project-content">
+                            <h3 class="title">South India Shopping Mall: SEO & UI Overhaul</h3>
+                            <p class="desc">Target - Fashion shoppers</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-item">
+                          <div class="project-img" data-bg-image="assets/images/project/project-2.webp"></div>
+                          <div class="project-content">
+                            <h3 class="title">KIMS Sunshine: Streamlined Web Maintenance</h3>
+                            <p class="desc">Target - Healthcare seekers</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-item">
+                          <div class="project-img" data-bg-image="assets/images/project/project-3.webp"></div>
+                          <div class="project-content">
+                            <h3 class="title">Sri Aishwarya Foods: Growing Organic Reach</h3>
+                            <p class="desc">Target - Organic rice buyers</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-item">
+                          <div class="project-img" data-bg-image="assets/images/project/project-4.webp"></div>
+                          <div class="project-content">
+                            <h3 class="title">Hirawats: Scaling E-Commerce with SEO</h3>
+                            <p class="desc">Target - Medical buyers</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-item">
+                          <div class="project-img" data-bg-image="assets/images/project/project-5.webp"></div>
+                          <div class="project-content">
+                            <h3 class="title">Ayaansh Infra: Digital Launch</h3>
+                            <p class="desc">Target - Real estate buyers</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination-area"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: Our Clients Section -->
 
         <!-- start: Service Section -->
         <section class="h9-service section-gap  section-gap-x tj-sticky-panel-container-2 tj-progress-wrapper d-none">
