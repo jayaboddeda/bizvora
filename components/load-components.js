@@ -56,8 +56,23 @@
     // Get current page filename
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
-    // Find all navigation menus
-    const navMenus = document.querySelectorAll('.mainmenu ul');
+    // Define solution detail pages
+    const solutionDetailPages = [
+      'strategic-documentation.html',
+      'political-strategy-research.html',
+      'digital-traditional-marketing.html',
+      'marketing-branding-solutions.html',
+      'organizational-analysis-development.html',
+      'strategic-consulting-excellence.html',
+      'manufacturing-business-setup.html',
+      'supply-chain-management-systems.html'
+    ];
+    
+    // Check if current page is a solution detail page
+    const isSolutionDetailPage = solutionDetailPages.includes(currentPage);
+    
+    // Find all navigation menus (desktop and mobile)
+    const navMenus = document.querySelectorAll('.mainmenu ul, .mobile_menu ul');
     
     navMenus.forEach(menu => {
       const menuItems = menu.querySelectorAll('li');
@@ -71,13 +86,19 @@
         // Remove any existing active classes
         item.classList.remove('current-menu-item', 'current-menu-ancestor');
         
-        // Check if this link matches current page
-        if (href === currentPage || 
+        // If on a solution detail page, highlight Solutions menu as ancestor
+        if (isSolutionDetailPage && href === 'solutions.html') {
+          item.classList.add('current-menu-ancestor');
+        }
+        // If on solutions.html itself, highlight as current item
+        else if (currentPage === 'solutions.html' && href === 'solutions.html') {
+          item.classList.add('current-menu-item');
+        }
+        // Check if this link matches current page exactly (for other pages)
+        else if (href === currentPage || 
             (currentPage === '' && href === 'index.html') ||
             (currentPage === 'index.html' && href === 'index.html') ||
             (currentPage.includes('index') && href === 'index.html')) {
-          item.classList.add('current-menu-ancestor');
-        } else if (href === currentPage) {
           item.classList.add('current-menu-item');
         }
       });
@@ -108,7 +129,16 @@
         // Use setTimeout to ensure DOM is fully updated
         setTimeout(function() {
           window.initMobileMenu();
+          // Set active menu item again after mobile menu is initialized
+          setTimeout(function() {
+            setActiveMenuItem();
+          }, 200);
         }, 100);
+      } else {
+        // If meanmenu initializes automatically, set active menu after a delay
+        setTimeout(function() {
+          setActiveMenuItem();
+        }, 500);
       }
     });
   }

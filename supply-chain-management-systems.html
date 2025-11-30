@@ -1,0 +1,461 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bizvora Supply Chain Management Systems">
+
+    <!-- Site Title -->
+    <title>Supply Chain Management Systems - Bizvora</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bexon-icons.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        /* Custom Styles for Supply Chain Diagram within Content */
+        .sc-diagram-wrapper {
+            background-color: #381321;
+            /* Dark maroon */
+            color: #fff;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-top: 40px;
+            overflow: hidden;
+        }
+
+        .sc-diagram-wrapper h4 {
+            color: #F5E5E4;
+            font-size: 18px;
+        }
+
+        .sc-diagram-wrapper p {
+            color: #d0c0c0;
+            font-size: 14px;
+        }
+
+        /* Diagram Layout */
+        .sc-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sc-side-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .sc-center-col {
+            flex: 0 0 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .sc-item {
+            margin-bottom: 30px;
+        }
+
+        .sc-side-col.left .sc-item {
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        .sc-side-col.right .sc-item {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        /* Circle SVG */
+        .sc-circle-svg {
+            width: 280px;
+            height: 280px;
+        }
+
+        .sc-icon-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .sc-icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffcccb;
+            font-size: 18px;
+            left: 50%;
+            top: 50%;
+            margin-left: -15px;
+            margin-top: -15px;
+        }
+
+        /* Positioning icons for 280px circle */
+        .sc-icon-strategy {
+            top: 21%;
+            left: 33%;
+        }
+
+        .sc-icon-quality {
+            top: 50%;
+            left: 17%;
+        }
+
+        .sc-icon-production {
+            top: 79%;
+            left: 33%;
+        }
+
+        .sc-icon-procurement {
+            top: 21%;
+            right: 33%;
+            left: auto;
+        }
+
+        .sc-icon-inventory {
+            top: 50%;
+            right: 17%;
+            left: auto;
+        }
+
+        .sc-icon-logistics {
+            top: 79%;
+            right: 33%;
+            left: auto;
+        }
+
+        /* Tech Box */
+        .sc-tech-box {
+            border: 1px solid rgba(255, 204, 203, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg, rgba(56, 19, 33, 0.8) 0%, rgba(88, 30, 50, 0.9) 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sc-tech-icon {
+            font-size: 30px;
+            color: #ffcccb;
+        }
+
+        @media (max-width: 767px) {
+            .sc-row {
+                flex-direction: column;
+            }
+
+            .sc-side-col.left .sc-item,
+            .sc-side-col.right .sc-item {
+                text-align: center;
+                padding: 0;
+            }
+
+            .sc-center-col {
+                order: -1;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="body-overlay"></div>
+    <!-- Preloader Start -->
+        <div class="tj-preloader is-loading">
+            <div class="tj-preloader-inner">
+                <div class="tj-preloader-ball-wrap">
+                    <div class="tj-preloader-ball-inner-wrap">
+                        <div class="tj-preloader-ball-inner">
+                            <div class="tj-preloader-ball"></div>
+                        </div>
+                        <div class="tj-preloader-ball-shadow"></div>
+                    </div>
+                    <div id="tj-weave-anim" class="tj-preloader-text">Loading...</div>
+                </div>
+            </div>
+            <div class="tj-preloader-overlay"></div>
+        </div>
+        <!-- Preloader end -->
+            <!-- back to top start -->
+                <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
+                <!-- back to top end -->
+                    <div id="header-placeholder"></div>
+                    <div id="smooth-wrapper">
+                        <div id="smooth-content">
+                            <main id="primary" class="site-main">
+                                <div class="space-for-header"></div>
+                                <!-- start: Blog Section -->
+                                    <section class="tj-blog-section section-gap slidebar-stickiy-container">
+                                        <div class="container">
+                                            <div class="row row-gap-5">
+                                                <div class="col-lg-8">
+                                                    <div class="post-details-wrapper">
+                                                        <div class="blog-images wow fadeInUp" data-wow-delay=".1s"><img
+                                                                src="assets/images/service/supply-chain-management-systems.jpg"
+                                                                alt="Supply Chain Management"></div>
+                                                        <h2 class="title title-anim">Supply Chain Management Systems
+                                                        </h2>
+                                                        <div class="blog-text">
+                                                            <p class="wow fadeInUp" data-wow-delay=".3s">Bizvora
+                                                                provides end-to-end supply chain design,
+                                                                implementation,
+                                                                and optimization services to enhance operational
+                                                                efficiency,
+                                                                reduce costs,
+                                                                and improve service delivery. Our supply chain solutions
+                                                                are lean,
+                                                                cost-effective,
+                                                                fast,
+                                                                and scalable,
+                                                                designed to give your organization a competitive edge.
+                                                            </p>
+                                                            <p class="wow fadeInUp" data-wow-delay=".3s">From strategic
+                                                                network design to tactical execution,
+                                                                we transform supply chains into strategic assets that
+                                                                drive business performance and customer satisfaction.
+                                                            </p>
+                                                            <!-- Custom Circular Diagram Section -->
+                                                                <div class="sc-diagram-wrapper wow fadeInUp"
+                                                                    data-wow-delay=".4s">
+                                                                    <div class="sc-row">
+                                                                        <!-- Left Text -->
+                                                                            <div class="sc-side-col left">
+                                                                                <div class="sc-item">
+                                                                                    <h4>Strategic Planning & Network Design
+                                                                                    </h4>
+                                                                                    <p>End-to-end blueprints,
+                                                                                        network design,
+                                                                                        demand planning,
+                                                                                        and cost modeling</p>
+                                                                                </div>
+                                                                                <div class="sc-item">
+                                                                                    <h4>Quality & Compliance Systems
+                                                                                    </h4>
+                                                                                    <p>QC systems,
+                                                                                        compliance frameworks,
+                                                                                        and supplier quality audits</p>
+                                                                                </div>
+                                                                                <div class="sc-item">
+                                                                                    <h4>Production Planning & Scheduling
+                                                                                    </h4>
+                                                                                    <p>Master production scheduling,
+                                                                                        capacity planning,
+                                                                                        MRP,
+                                                                                        and bottleneck optimization</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Center Circle -->
+                                                                                <div class="sc-center-col"><svg
+                                                                                        class="sc-circle-svg"
+                                                                                        viewBox="0 0 400 400"
+                                                                                        fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <!-- Segments -->
+                                                                                            <path
+                                                                                                d="M200 20 L200 100 A100 100 0 0 1 286.6 150 L355.9 110 A180 180 0 0 0 200 20 Z"
+                                                                                                stroke="#ffcccb"
+                                                                                                stroke-width="2"
+                                                                                                fill="none" />
+                                                                                            <path
+                                                                                                d="M355.9 110 L286.6 150 A100 100 0 0 1 286.6 250 L355.9 290 A180 180 0 0 0 355.9 110 Z"
+                                                                                                stroke="#ffcccb"
+                                                                                                stroke-width="2"
+                                                                                                fill="none" />
+                                                                                            <path
+                                                                                                d="M355.9 290 L286.6 250 A100 100 0 0 1 200 300 L200 380 A180 180 0 0 0 355.9 290 Z"
+                                                                                                stroke="#ffcccb"
+                                                                                                stroke-width="2"
+                                                                                                fill="none" />
+                                                                                            <path
+                                                                                                d="M200 380 L200 300 A100 100 0 0 1 113.4 250 L44.1 290 A180 180 0 0 0 200 380 Z"
+                                                                                                stroke="#ffcccb"
+                                                                                                stroke-width="2"
+                                                                                                fill="none" />
+                                                                                            <path
+                                                                                                d="M44.1 290 L113.4 250 A100 100 0 0 1 113.4 150 L44.1 110 A180 180 0 0 0 44.1 290 Z"
+                                                                                                stroke="#ffcccb"
+                                                                                                stroke-width="2"
+                                                                                                fill="none" />
+                                                                                            <path
+                                                                                                d="M44.1 110 L113.4 150 A100 100 0 0 1 200 100 L200 20 A180 180 0 0 0 44.1 110 Z"
+                                                                                                stroke="#ffcccb"
+                                                                                                stroke-width="2"
+                                                                                                fill="none" />
+                                                                                            <!-- Inner Circle -->
+                                                                                                <circle cx="200"
+                                                                                                    cy="200" r="80"
+                                                                                                    stroke="#ffcccb"
+                                                                                                    stroke-width="1"
+                                                                                                    fill="#381321" />
+                                                                                    </svg>
+                                                                                    <div class="sc-icon-overlay">
+                                                                                        <div
+                                                                                            class="sc-icon sc-icon-strategy">
+                                                                                            <i
+                                                                                                class="fa-light fa-gamepad-modern"></i>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="sc-icon sc-icon-quality">
+                                                                                            <i
+                                                                                                class="fa-light fa-ruler-combined"></i>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="sc-icon sc-icon-production">
+                                                                                            <i
+                                                                                                class="fa-light fa-clipboard-list-check"></i>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="sc-icon sc-icon-procurement">
+                                                                                            <i
+                                                                                                class="fa-light fa-shopping-cart"></i>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="sc-icon sc-icon-inventory">
+                                                                                            <i
+                                                                                                class="fa-light fa-warehouse"></i>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="sc-icon sc-icon-logistics">
+                                                                                            <i
+                                                                                                class="fa-light fa-truck-fast"></i>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Right Text -->
+                                                                                    <div class="sc-side-col right">
+                                                                                        <div class="sc-item">
+                                                                                            <h4>Procurement & Vendor
+                                                                                                Management</h4>
+                                                                                            <p>Supplier evaluation,
+                                                                                                competitive sourcing,
+                                                                                                vendor negotiation,
+                                                                                                and contract management
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="sc-item">
+                                                                                            <h4>Inventory & Warehouse
+                                                                                                Management</h4>
+                                                                                            <p>Inventory control,
+                                                                                                safety stock planning,
+                                                                                                warehouse optimization,
+                                                                                                and FIFO/LIFO strategies
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="sc-item">
+                                                                                            <h4>Logistics & Distribution
+                                                                                            </h4>
+                                                                                            <p>Transportation planning,
+                                                                                                route optimization,
+                                                                                                distribution mapping,
+                                                                                                and fleet management</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Diagram Wrapper -->
+                                                                    <!-- Technology Section -->
+                                                                        <div class="sc-tech-box">
+                                                                            <div class="sc-tech-icon"><i
+                                                                                    class="fa-light fa-microchip"></i>
+                                                                            </div>
+                                                                            <div class="sc-tech-content text-white">
+                                                                                <h4 class="text-white">Technology & Automation</h4>
+                                                                                <p class="m-0">ERP integration support,
+                                                                                    inventory automation tools,
+                                                                                    and digital dashboards with
+                                                                                    real-time tracking systems for
+                                                                                    complete supply chain visibility</p>
+                                                                            </div>
+                                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Sidebar -->
+                                                    <div class="col-lg-4">
+                                                        <div class="tj-main-sidebar slidebar-stickiy">
+                                                            <div class="tj-sidebar-widget service-categories wow fadeInUp"
+                                                                data-wow-delay=".1s">
+                                                                <h4 class="widget-title">More services</h4>
+                                                                <ul>
+                                                                    <li><a href="political-strategy-research.html">Political Strategy & Research<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                    <li><a href="digital-traditional-marketing.html">Digital & Traditional Marketing<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                    <li><a href="marketing-branding-solutions.html">Marketing & Branding<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                    <li><a href="organizational-analysis-development.html">Organizational Development<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                    <li><a href="strategic-consulting-excellence.html">Strategic Consulting<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                    <li><a href="manufacturing-business-setup.html">Manufacturing Setup<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                    <li><a href="strategic-documentation.html">Strategic Documentation<span class="icon"><i
+                                                                                    class="tji-arrow-right"></i></span></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- end: Blog Section -->
+                            </main>
+                            <!-- start: Footer Section -->
+                                <div id="footer-placeholder"></div>
+                                <!-- end: Footer Section -->
+                        </div>
+                    </div>
+                    <!-- JS here -->
+                        <script src="assets/js/jquery.min.js"></script>
+                        <script src="assets/js/bootstrap.bundle.min.js"></script>
+                        <script src="assets/js/gsap.min.js"></script>
+                        <script src="assets/js/ScrollSmoother.js"></script>
+                        <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+                        <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+                        <script src="assets/js/gsap-split-text.min.js"></script>
+                        <script src="assets/js/jquery.nice-select.min.js"></script>
+                        <script src="assets/js/swiper.min.js"></script>
+                        <script src="assets/js/odometer.min.js"></script>
+                        <script src="assets/js/venobox.min.js"></script>
+                        <script src="assets/js/appear.min.js"></script>
+                        <script src="assets/js/wow.min.js"></script>
+                        <script src="assets/js/meanmenu.js"></script>
+                        <script src="assets/js/main.js"></script>
+                        <script src="components/load-components.js"></script>
+</body>
+
+</html>
