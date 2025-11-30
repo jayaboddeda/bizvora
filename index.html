@@ -232,6 +232,8 @@
       transition: none !important;
       transition-delay: 0s !important;
     }
+
+    /* Contact Modal Styling */
   </style>
 </head>
 
@@ -255,7 +257,7 @@
                       <h1 class="slider-title">Advising Tomorrow's Growth Today</h1>
                       <div class="slider-desc">Bizvora is a strategy-led consulting and execution partner helping businesses achieve organizational excellence, market leadership, and scalable growth through structured consulting, marketing intelligence, manufacturing setup, and complete supply chain systems.</div>
                       <div class="slider-btn">
-                        <a class="tj-primary-btn" href="contact.html">
+                        <a class="tj-primary-btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
                           <span class="btn-text"><span>Get Started</span></span>
                           <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                         </a>
@@ -1491,6 +1493,10 @@
       <div id="footer-placeholder"></div>
     </div>
   </div>
+
+  <!-- Contact Modal Component Placeholder -->
+  <div id="contact-modal-placeholder"></div>
+
   <!-- JS here -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="components/load-components.js"></script>
@@ -1509,6 +1515,18 @@
   <script src="assets/js/meanmenu.js"></script>
   <script src="assets/js/magiccursor.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    // Prevent default navigation for Get Started button
+    document.addEventListener('DOMContentLoaded', function() {
+      // Prevent default navigation for Get Started button
+      const getStartedBtn = document.querySelector('[data-bs-target="#contactModal"]');
+      if (getStartedBtn) {
+        getStartedBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

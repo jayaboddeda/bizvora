@@ -1,0 +1,157 @@
+<style>
+  /* Contact Modal Styling */
+  #contactModal .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+  #contactModal .modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding: 25px 30px;
+  }
+  #contactModal .modal-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--tj-color-text-heading);
+    margin: 0;
+  }
+  #contactModal .modal-body {
+    padding: 30px;
+  }
+  #contactModal .modal-close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    color: var(--tj-color-text-heading, #333);
+    line-height: 1;
+    border-radius: 50%;
+    font-size: 0;
+  }
+  #contactModal .modal-close-btn:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  #contactModal .modal-close-btn span {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 300;
+    display: block;
+  }
+  #contactModal .contact-form {
+    margin: 0;
+    padding: 0;
+  }
+  #contactModal .contact-form .title {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    #contactModal .modal-body {
+      padding: 20px;
+    }
+    #contactModal .modal-header {
+      padding: 20px;
+    }
+    #contactModal .modal-title {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="contactModalLabel">Get in Touch</h3>
+        <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="contact-form">
+          <form id="contact-form-modal">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-input">
+                  <input type="text" name="cfName">
+                  <label class="cf-label">Name <span>*</span></label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-input">
+                  <input type="text" name="cfCompany">
+                  <label class="cf-label">Company <span>*</span></label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-input">
+                  <input type="email" name="cfEmail">
+                  <label class="cf-label">Email <span>*</span></label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-input">
+                  <input type="tel" name="cfPhone">
+                  <label class="cf-label">Phone <span>*</span></label>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-input">
+                  <div class="tj-nice-select-box">
+                    <div class="tj-select">
+                      <select name="cfSubject">
+                        <option value="0">Choose a service <span>*</span></option>
+                        <option value="1">Organizational Analysis & Development</option>
+                        <option value="2">Marketing, Branding & Promotions</option>
+                        <option value="3">Advertising & PR</option>
+                        <option value="4">Influencer Marketing</option>
+                        <option value="5">Events & Activations</option>
+                        <option value="6">Sales Strategy & Supply Chain Management</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-input message-input">
+                  <textarea name="cfMessage" id="message-modal"></textarea>
+                  <label class="cf-label">Message <span>*</span></label>
+                </div>
+              </div>
+              <div class="submit-btn">
+                <button class="tj-primary-btn" type="submit">
+                  <span class="btn-text"><span>Submit Now</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Initialize nice-select for modal dropdown when modal is shown
+  (function() {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+      contactModal.addEventListener('shown.bs.modal', function() {
+        // Reinitialize nice-select for the dropdown in modal
+        if (typeof $ !== 'undefined' && $.fn.niceSelect) {
+          $('#contactModal select[name="cfSubject"]').niceSelect();
+        }
+      });
+    }
+  })();
+</script>
+

@@ -152,16 +152,54 @@
     });
   }
 
+  /**
+   * Load contact section component
+   */
+  function loadContactSection() {
+    loadComponent('components/contact-section.html', '#contact-section-placeholder', function() {
+      console.log('Contact section loaded successfully');
+    });
+  }
+
+  /**
+   * Load contact modal component
+   */
+  function loadContactModal() {
+    loadComponent('components/contact-modal.html', '#contact-modal-placeholder', function() {
+      console.log('Contact modal loaded successfully');
+    });
+  }
+
   // Auto-load components when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       loadHeader();
       loadFooter();
+      
+      // Auto-load contact section if placeholder exists
+      if (document.querySelector('#contact-section-placeholder')) {
+        loadContactSection();
+      }
+      
+      // Auto-load contact modal if placeholder exists
+      if (document.querySelector('#contact-modal-placeholder')) {
+        loadContactModal();
+      }
     });
   } else {
     // DOM is already ready
     loadHeader();
     loadFooter();
+    
+    // Auto-load contact section if placeholder exists
+    if (document.querySelector('#contact-section-placeholder')) {
+      loadContactSection();
+    }
+    
+    // Auto-load contact modal if placeholder exists
+    if (document.querySelector('#contact-modal-placeholder')) {
+      loadContactModal();
+    }
   }
 
   // Export functions for manual loading if needed
@@ -169,6 +207,8 @@
     loadComponent: loadComponent,
     loadHeader: loadHeader,
     loadFooter: loadFooter,
+    loadContactSection: loadContactSection,
+    loadContactModal: loadContactModal,
     setActiveMenuItem: setActiveMenuItem
   };
 
