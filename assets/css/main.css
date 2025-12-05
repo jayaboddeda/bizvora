@@ -89,9 +89,9 @@ START: Theme Default CSS
   --tj-color-text-body-3: #67787a;
   --tj-color-text-body-4: #18292c;
   --tj-color-text-body-5: rgba(255, 255, 255, 0.8);
-  --tj-color-theme-primary: #EC2B25;
-  --tj-color-theme-bg: #F5E5E4;
-  --tj-color-theme-bg-2: #F0D5D4;
+  --tj-color-theme-primary: #1e8a8a;
+  --tj-color-theme-bg: #d8e5e5;
+  --tj-color-theme-bg-2: #cee0e0;
   --tj-color-theme-bg-3: #202e30;
   --tj-color-theme-dark: #0c1e21;
   --tj-color-theme-dark-2: #18292c;
@@ -13740,7 +13740,7 @@ START: Theme Slider CSS
   position: relative;
   z-index: 1;
   margin: 0 15px 0 15px;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   overflow: hidden;
 }
 .tj-slider-section .hero-slider {
