@@ -29,6 +29,7 @@
     .client-cards-slider .swiper-slide {
       height: auto;
     }
+
     .client-cards-slider .project-item {
       display: flex;
       flex-direction: column;
@@ -38,12 +39,14 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
+
     .client-cards-slider .project-item .project-img {
       position: relative;
       height: 180px;
       border-radius: 8px 8px 0 0;
       flex-shrink: 0;
     }
+
     .client-cards-slider .project-item .project-content {
       position: relative;
       bottom: auto;
@@ -60,6 +63,7 @@
       display: flex;
       flex-direction: column;
     }
+
     .client-cards-slider .project-item .project-content .title {
       color: var(--tj-color-text-heading);
       margin-bottom: 8px;
@@ -70,6 +74,7 @@
       text-align: left;
       text-shadow: none;
     }
+
     .client-cards-slider .project-item .project-content .desc {
       color: #666666;
       margin: 0;
@@ -77,18 +82,22 @@
       line-height: 1.5;
       text-shadow: none;
     }
+
     @media (max-width: 991px) {
       .client-cards-slider .project-item .project-img {
         height: 160px;
       }
     }
+
     @media (max-width: 767px) {
       .client-cards-slider .project-item .project-content {
         padding: 20px;
       }
+
       .client-cards-slider .project-item .project-img {
         height: 150px;
       }
+
       .client-cards-slider .project-item .project-content .title {
         font-size: 16px;
       }
@@ -101,18 +110,22 @@
       padding: 80px 0;
       background-color: #f8f9fa;
     }
+
     .partner-logos-wrapper {
       margin-top: 50px;
     }
+
     .partner-logos-row {
       overflow: hidden;
       white-space: nowrap;
       margin-bottom: 30px;
       position: relative;
     }
+
     .partner-logos-row:last-child {
       margin-bottom: 0;
     }
+
     .partner-logos-track {
       display: inline-flex;
       align-items: center;
@@ -121,14 +134,17 @@
       animation-iteration-count: infinite;
       will-change: transform;
     }
+
     .partner-logos-row-1 .partner-logos-track {
       animation-name: scroll-right;
       animation-duration: 50s;
     }
+
     .partner-logos-row-2 .partner-logos-track {
       animation-name: scroll-left;
       animation-duration: 50s;
     }
+
     .partner-logo-item {
       flex-shrink: 0;
       display: flex;
@@ -142,10 +158,12 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .partner-logo-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
     }
+
     .partner-logo-item img {
       max-width: 100%;
       max-height: 70px;
@@ -156,10 +174,12 @@
       opacity: 0.7;
       transition: filter 0.3s ease, opacity 0.3s ease;
     }
+
     .partner-logo-item:hover img {
       filter: grayscale(0%);
       opacity: 1;
     }
+
     .partner-logo-item .logo-placeholder {
       display: flex;
       align-items: center;
@@ -172,50 +192,62 @@
       text-align: center;
       line-height: 1.2;
     }
+
     @keyframes scroll-right {
       from {
         transform: translateX(0);
       }
+
       to {
         transform: translateX(-50%);
       }
     }
+
     @keyframes scroll-left {
       from {
         transform: translateX(-50%);
       }
+
       to {
         transform: translateX(0);
       }
     }
+
     @media (max-width: 991px) {
       .partner-logo-item {
         width: 150px;
         height: 90px;
         padding: 12px 15px;
       }
+
       .partner-logos-track {
         gap: 40px;
       }
     }
+
     @media (max-width: 767px) {
       .tj-partner-logos-section {
         padding: 60px 0;
       }
+
       .partner-logos-wrapper {
         margin-top: 30px;
       }
+
       .partner-logo-item {
         width: 120px;
         height: 80px;
         padding: 10px 12px;
       }
+
       .partner-logos-track {
         gap: 30px;
       }
+
       .partner-logo-item img {
         max-height: 50px;
       }
+
       .partner-logos-row-1 .partner-logos-track,
       .partner-logos-row-2 .partner-logos-track {
         animation-duration: 30s;
@@ -255,7 +287,10 @@
                   <div class="slider-wrapper">
                     <div class="slider-content">
                       <h1 class="slider-title">Advising Tomorrow's Growth Today</h1>
-                      <div class="slider-desc">Bizvora is a strategy-led consulting and execution partner helping businesses achieve organizational excellence, market leadership, and scalable growth through structured consulting, marketing intelligence, manufacturing setup, and complete supply chain systems.</div>
+                      <div class="slider-desc">Bizvora is a strategy-led consulting and execution partner helping
+                        businesses achieve organizational excellence, market leadership, and scalable growth through
+                        structured consulting, marketing intelligence, manufacturing setup, and complete supply chain
+                        systems.</div>
                       <div class="slider-btn">
                         <a class="tj-primary-btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
                           <span class="btn-text"><span>Get Started</span></span>
@@ -267,12 +302,13 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/service-details.webp"></div>
+                <div class="slider-bg-image" data-bg-image="assets/images/service/bussiness_consultant.jpeg"></div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
                       <h1 class="slider-title">Strategic Consulting & Business Growth</h1>
-                      <div class="slider-desc">Navigate complex markets with datadriven strategies and actionable roadmaps</div>
+                      <div class="slider-desc">Navigate complex markets with datadriven strategies and actionable
+                        roadmaps</div>
                       <div class="slider-btn">
                         <a class="tj-primary-btn" href="strategic-consulting-excellence.html">
                           <span class="btn-text"><span>Read More</span></span>
@@ -284,7 +320,8 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/organizational-analysis-development.jpg"></div>
+                <div class="slider-bg-image"
+                  data-bg-image="assets/images/service/organizational-analysis-development.jpg"></div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
@@ -301,7 +338,8 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/manufacturing-business-setup.jpg"></div>
+                <div class="slider-bg-image" data-bg-image="assets/images/service/manufacturing.jpeg">
+                </div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
@@ -318,7 +356,8 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/digital-traditional-marketing.jpg"></div>
+                <div class="slider-bg-image" data-bg-image="assets/images/service/digital-traditional-marketing.jpg">
+                </div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
@@ -335,7 +374,8 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/marketing-branding-solutions.jpg"></div>
+                <div class="slider-bg-image" data-bg-image="assets/images/service/marketing-branding-solutions.jpg">
+                </div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
@@ -352,7 +392,8 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/supply-chain-management-systems.jpg"></div>
+                <div class="slider-bg-image" data-bg-image="assets/images/service/supply_chain.jpeg">
+                </div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
@@ -369,12 +410,14 @@
                 </div>
               </div>
               <div class="swiper-slide tj-slider-item">
-                <div class="slider-bg-image" data-bg-image="assets/images/service/political-strategy-research.jpg"></div>
+                <div class="slider-bg-image" data-bg-image="assets/images/service/political-strategy-research.jpg">
+                </div>
                 <div class="container">
                   <div class="slider-wrapper">
                     <div class="slider-content">
                       <h1 class="slider-title">Political Research & Strategic Campaigning</h1>
-                      <div class="slider-desc">Data-driven political strategies and comprehensive campaign management</div>
+                      <div class="slider-desc">Data-driven political strategies and comprehensive campaign management
+                      </div>
                       <div class="slider-btn">
                         <a class="tj-primary-btn" href="political-strategy-research.html">
                           <span class="btn-text"><span>Read More</span></span>
@@ -421,165 +464,169 @@
 
         </section>
         <!-- end: Banner Slider -->
-                 <!-- start: Fun fact Section -->
+        <!-- start: Fun fact Section -->
         <section class="tj-funfact-section section-gap section-gap-x rounded-0 pb-5 m-0">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="heading-wrap-content">
-                    <div class="sec-heading style-4">
-                      <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>OUR MILESTONES</span>
-                      <h4 class="sec-title title-anim">Transforming Businesses Through Strategy, Structure & Success</h4>
-                    </div>
-
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="heading-wrap-content">
+                  <div class="sec-heading style-4">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>OUR
+                      MILESTONES</span>
+                    <h4 class="sec-title title-anim">Transforming Businesses Through Strategy, Structure & Success</h4>
                   </div>
+
                 </div>
               </div>
-              <div class="row row-gap-4">
-                <div class="col-lg-3 col-md-6">
-                  <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".1s">
-                    <span class="count-icon"><i class="tji-growth"></i></span>
-                    <span class="steps">01.</span>
-                    <div class="count-inner">
-                      <span class="count-text">Years of Excellence</span>
-                      <div class="inline-content">
-                        <span class="odometer countup-number" data-count="16"></span>
-                        <span class="count-plus">+</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".3s">
-                    <span class="count-icon"><i class="tji-worldwide"></i></span>
-                    <span class="steps">02.</span>
-                    <div class="count-inner">
-                      <span class="count-text">Clients</span>
-                      <div class="inline-content">
-                        <span class="odometer countup-number" data-count="300"></span>
-                        <span class="count-plus">+</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".5s">
-                    <span class="count-icon"><i class="tji-complete"></i></span>
-                    <span class="steps">03.</span>
-                    <div class="count-inner">
-                      <span class="count-text">Industries</span>
-                      <div class="inline-content">
-                        <span class="odometer countup-number" data-count="12"></span>
-                        <span class="count-plus">+</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".7s">
-                    <span class="count-icon"><i class="tji-growth"></i></span>
-                    <span class="steps">04.</span>
-                    <div class="count-inner">
-                      <span class="count-text">Experts</span>
-                      <div class="inline-content">
-                        <span class="odometer countup-number" data-count="50"></span>
-                        <span class="count-plus">+</span>
-                      </div>
+            </div>
+            <div class="row row-gap-4">
+              <div class="col-lg-3 col-md-6">
+                <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".1s">
+                  <span class="count-icon"><i class="tji-growth"></i></span>
+                  <span class="steps">01.</span>
+                  <div class="count-inner">
+                    <span class="count-text">Years of Excellence</span>
+                    <div class="inline-content">
+                      <span class="odometer countup-number" data-count="16"></span>
+                      <span class="count-plus">+</span>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".3s">
+                  <span class="count-icon"><i class="tji-worldwide"></i></span>
+                  <span class="steps">02.</span>
+                  <div class="count-inner">
+                    <span class="count-text">Clients</span>
+                    <div class="inline-content">
+                      <span class="odometer countup-number" data-count="300"></span>
+                      <span class="count-plus">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".5s">
+                  <span class="count-icon"><i class="tji-complete"></i></span>
+                  <span class="steps">03.</span>
+                  <div class="count-inner">
+                    <span class="count-text">Industries</span>
+                    <div class="inline-content">
+                      <span class="odometer countup-number" data-count="12"></span>
+                      <span class="count-plus">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="countup-item style-2 wow fadeInUp" data-wow-delay=".7s">
+                  <span class="count-icon"><i class="tji-growth"></i></span>
+                  <span class="steps">04.</span>
+                  <div class="count-inner">
+                    <span class="count-text">Experts</span>
+                    <div class="inline-content">
+                      <span class="odometer countup-number" data-count="50"></span>
+                      <span class="count-plus">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="bg-shape-1">
-              <img src="assets/images/shape/pattern-2.svg" alt="">
-            </div>
-            <div class="bg-shape-2">
-              <img src="assets/images/shape/pattern-3.svg" alt="">
-            </div>
-          </section>
-          <!-- end: Fun fact Section -->
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: Fun fact Section -->
 
-                <!-- start: About Section -->
-                <section class="tj-about-section-2 section-gap section-gap-x rounded-0 pt-5 m-0">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-xl-6 col-lg-6 order-lg-1 order-2">
-                          <div class="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
-                            <div class="about-img overflow-hidden">
-                              <img data-speed=".8" src="assets/images/bizvora/img-13.jpeg" alt="">
-                            </div>
-                            <div class="box-area">
-                              <div class="progress-box wow fadeInUp" data-wow-delay=".3s">
-                                <h4 class="title">Consulting Excellence</h4>
-                                <ul class="tj-progress-list">
-                                  <li>
-                                    <h6 class="tj-progress-title">Success Rate </h6>
-                                    <div class="tj-progress">
-                                      <span class="tj-progress-percent">98%</span>
-                                      <div class="tj-progress-bar" data-percent="98">
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li>
-                                    <h6 class="tj-progress-title">Client Retention</h6>
-                                    <div class="tj-progress">
-                                      <span class="tj-progress-percent">95%</span>
-                                      <div class="tj-progress-bar" data-percent="95">
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
+        <!-- start: About Section -->
+        <section class="tj-about-section-2 section-gap section-gap-x rounded-0 pt-5 m-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 order-lg-1 order-2">
+                <div class="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
+                  <div class="about-img overflow-hidden">
+                    <img data-speed=".8" src="assets/images/bizvora/img-13.jpeg" alt="">
+                  </div>
+                  <div class="box-area">
+                    <div class="progress-box wow fadeInUp" data-wow-delay=".3s">
+                      <h4 class="title">Consulting Excellence</h4>
+                      <ul class="tj-progress-list">
+                        <li>
+                          <h6 class="tj-progress-title">Success Rate </h6>
+                          <div class="tj-progress">
+                            <span class="tj-progress-percent">98%</span>
+                            <div class="tj-progress-bar" data-percent="98">
                             </div>
                           </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 order-lg-2 order-1">
-                          <div class="about-content-area">
-                            <div class="sec-heading style-3">
-                              <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>Who We Are</span>
-                              <h4 class="sec-title title-anim">Bizvora Consulting Pvt. Ltd. is a strategic business consulting firm dedicated to helping organizations analyze, build, and grow sustainably.
-                              </h4>
+                        </li>
+                        <li>
+                          <h6 class="tj-progress-title">Client Retention</h6>
+                          <div class="tj-progress">
+                            <span class="tj-progress-percent">95%</span>
+                            <div class="tj-progress-bar" data-percent="95">
                             </div>
                           </div>
-                          <div class="about-bottom-area">
-                            <div class="mission-vision-box wow fadeInLeft" data-wow-delay=".5s">
-                              <h4 class="title">Our Mission</h4>
-                              <p class="desc">To empower businesses with data-driven insights, creative execution, and long-term strategies that ensure sustainable success.
-                              </p>
-                              <ul class="list-items">
-                                <li><i class="tji-list"></i>Innovation & Excellence</li>
-                                <li><i class="tji-list"></i>Exceptional Customer</li>
-                                <li><i class="tji-list"></i>Business Growth</li>
-                              </ul>
-                            </div>
-                            <div class="mission-vision-box wow fadeInRight" data-wow-delay=".5s">
-                              <h4 class="title">Our Vision</h4>
-                              <p class="desc">To be a trusted consulting partner in organizational growth, marketing strategy, and global business development.
-                              </p>
-                              <ul class="list-items">
-                                <li><i class="tji-list"></i>Global Leadership</li>
-                                <li><i class="tji-list"></i>Transformative Impact</li>
-                                <li><i class="tji-list"></i>Sustainable Success</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="about-btn-area wow fadeInUp" data-wow-delay=".5s">
-                            <a class="tj-primary-btn" href="about.html">
-                              <span class="btn-text"><span>Learn More About Us</span></span>
-                              <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="bg-shape-1">
-                      <img src="assets/images/shape/pattern-2.svg" alt="">
-                    </div>
-                    <div class="bg-shape-2">
-                      <img src="assets/images/shape/pattern-3.svg" alt="">
-                    </div>
-                  </section>
-                  <!-- end: About Section -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 order-lg-2 order-1">
+                <div class="about-content-area">
+                  <div class="sec-heading style-3">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>Who We Are</span>
+                    <h4 class="sec-title title-anim">Bizvora Consulting Pvt. Ltd. is a strategic business consulting
+                      firm dedicated to helping organizations analyze, build, and grow sustainably.
+                    </h4>
+                  </div>
+                </div>
+                <div class="about-bottom-area">
+                  <div class="mission-vision-box wow fadeInLeft" data-wow-delay=".5s">
+                    <h4 class="title">Our Mission</h4>
+                    <p class="desc">To empower businesses with data-driven insights, creative execution, and long-term
+                      strategies that ensure sustainable success.
+                    </p>
+                    <ul class="list-items">
+                      <li><i class="tji-list"></i>Innovation & Excellence</li>
+                      <li><i class="tji-list"></i>Exceptional Customer</li>
+                      <li><i class="tji-list"></i>Business Growth</li>
+                    </ul>
+                  </div>
+                  <div class="mission-vision-box wow fadeInRight" data-wow-delay=".5s">
+                    <h4 class="title">Our Vision</h4>
+                    <p class="desc">To be a trusted consulting partner in organizational growth, marketing strategy, and
+                      global business development.
+                    </p>
+                    <ul class="list-items">
+                      <li><i class="tji-list"></i>Global Leadership</li>
+                      <li><i class="tji-list"></i>Transformative Impact</li>
+                      <li><i class="tji-list"></i>Sustainable Success</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="about-btn-area wow fadeInUp" data-wow-delay=".5s">
+                  <a class="tj-primary-btn" href="about.html">
+                    <span class="btn-text"><span>Learn More About Us</span></span>
+                    <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: About Section -->
 
         <!-- start: Our Clients Section -->
         <section class="tj-project-section-2 section-gap section-gap-x rounded-0">
@@ -588,8 +635,11 @@
               <div class="col-12">
                 <div class="heading-wrap-content">
                   <div class="sec-heading style-4">
-                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-award"></i>Our Clients</span>
-                    <h4 class="sec-title title-anim">Our success lies in the results we deliver. From real estate to e-commerce, we've helped brands grow through smart digital strategies. Explore how we turn ideas into impact.</h4>
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-award"></i>Our
+                      Clients</span>
+                    <h4 class="sec-title title-anim">Our success lies in the results we deliver. From real estate to
+                      e-commerce, we've helped brands grow through smart digital strategies. Explore how we turn ideas
+                      into impact.</h4>
                   </div>
                 </div>
               </div>
@@ -603,7 +653,9 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/south-india-shopping-mall.webp"></div>
+                          <div class="project-img"
+                            data-bg-image="https://www.shiftwave.com/images/successstories/south-india-shopping-mall.webp">
+                          </div>
                           <div class="project-content">
                             <h3 class="title">South India Shopping Mall: SEO & UI Overhaul</h3>
                             <p class="desc">Target - Fashion shoppers</p>
@@ -612,7 +664,8 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/kims-sunshine.webp"></div>
+                          <div class="project-img"
+                            data-bg-image="https://www.shiftwave.com/images/successstories/kims-sunshine.webp"></div>
                           <div class="project-content">
                             <h3 class="title">KIMS Sunshine: Streamlined Web Maintenance</h3>
                             <p class="desc">Target - Healthcare seekers</p>
@@ -621,7 +674,9 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/sri-aishwarya-foods.webp"></div>
+                          <div class="project-img"
+                            data-bg-image="https://www.shiftwave.com/images/successstories/sri-aishwarya-foods.webp">
+                          </div>
                           <div class="project-content">
                             <h3 class="title">Sri Aishwarya Foods: Growing Organic Reach</h3>
                             <p class="desc">Target - Organic rice buyers</p>
@@ -630,7 +685,9 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/sri-aishwarya-foods.webp"></div>
+                          <div class="project-img"
+                            data-bg-image="https://www.shiftwave.com/images/successstories/sri-aishwarya-foods.webp">
+                          </div>
                           <div class="project-content">
                             <h3 class="title">Hirawats: Scaling E-Commerce with SEO</h3>
                             <p class="desc">Target - Medical buyers</p>
@@ -639,7 +696,8 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="project-item">
-                          <div class="project-img" data-bg-image="https://www.shiftwave.com/images/successstories/ayaansh-infra.webp"></div>
+                          <div class="project-img"
+                            data-bg-image="https://www.shiftwave.com/images/successstories/ayaansh-infra.webp"></div>
                           <div class="project-content">
                             <h3 class="title">Ayaansh Infra: Digital Launch</h3>
                             <p class="desc">Target - Real estate buyers</p>
@@ -669,7 +727,8 @@
               <div class="col-12">
                 <div class="heading-wrap-content">
                   <div class="sec-heading style-4">
-                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-award"></i>Our Partners</span>
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-award"></i>Our
+                      Partners</span>
                     <h4 class="sec-title title-anim">Trusted by leading brands across industries</h4>
                   </div>
                 </div>
@@ -681,101 +740,79 @@
             <div class="partner-logos-row partner-logos-row-1">
               <div class="partner-logos-track">
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                  <img src="assets/images/brands/stanley.png" alt="Stanley"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Stanley </div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                  <img src="assets/images/brands/pernodricrd.png" alt="permord ricard"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">permord ricard</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                  <img src="assets/images/brands/sterlite.jpg" alt="sterlite"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">sterlite</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
+                  <img src="assets/images/brands/vodafone_idea.png" alt="vodafone_idea"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">vodafone_idea</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="HIRAWATS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">HIRAWATS</div>
+                  <img src="assets/images/brands/paysafe.webp" alt="paysafe"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">paysafe</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="CARPET KING" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">CARPET KING</div>
+                  <img src="assets/images/brands/stanley.png" alt="Stanley"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Stanley </div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="TRYB" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">TRYB</div>
+                  <img src="assets/images/brands/pernodricrd.png" alt="permord ricard"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">permord ricard</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="Manbhum" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">Manbhum</div>
+                  <img src="assets/images/brands/sterlite.jpg" alt="sterlite"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">sterlite</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="Karlan CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">Karlan</div>
+                  <img src="assets/images/brands/vodafone_idea.png" alt="vodafone_idea"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">vodafone_idea</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="5am fresh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">5am fresh</div>
+                  <img src="assets/images/brands/paysafe.webp" alt="paysafe"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">paysafe</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="CMR SHOPPING MALL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">CMR MALL</div>
+                  <img src="assets/images/brands/stanley.png" alt="Stanley"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Stanley </div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="R.S. Brothers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">R.S. Brothers</div>
-                </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                  <img src="assets/images/brands/pernodricrd.png" alt="permord ricard"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">permord ricard</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                  <img src="assets/images/brands/sterlite.jpg" alt="sterlite"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">sterlite</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                  <img src="assets/images/brands/vodafone_idea.png" alt="vodafone_idea"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">vodafone_idea</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="HIRAWATS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">HIRAWATS</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="CARPET KING" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">CARPET KING</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="TRYB" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">TRYB</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="Manbhum" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">Manbhum</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="Karlan CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">Karlan</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="5am fresh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">5am fresh</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="CMR SHOPPING MALL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">CMR MALL</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="R.S. Brothers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">R.S. Brothers</div>
+                  <img src="assets/images/brands/paysafe.webp" alt="paysafe"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">paysafe</div>
                 </div>
               </div>
             </div>
@@ -783,101 +820,79 @@
             <div class="partner-logos-row partner-logos-row-2">
               <div class="partner-logos-track">
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="VALUE ZONE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">VALUE ZONE</div>
+                  <img src="assets/images/brands/stanley.png" alt="Stanley"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Stanley </div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="FLOOR DADDY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">FLOOR DADDY</div>
+                  <img src="assets/images/brands/pernodricrd.png" alt="permord ricard"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">permord ricard</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="Healthy Home Flooring" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">Healthy Home</div>
+                  <img src="assets/images/brands/sterlite.jpg" alt="sterlite"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">sterlite</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="GOLD'S GYM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">GOLD'S GYM</div>
+                  <img src="assets/images/brands/vodafone_idea.png" alt="vodafone_idea"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">vodafone_idea</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="NOVUS CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">NOVUS</div>
+                  <img src="assets/images/brands/paysafe.webp" alt="paysafe"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">paysafe</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="M.V.V BUILDERS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">M.V.V BUILDERS</div>
+                  <img src="assets/images/brands/stanley.png" alt="Stanley"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Stanley </div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="AYAANSH INFRASTRUCTURE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">AYAANSH</div>
+                  <img src="assets/images/brands/pernodricrd.png" alt="permord ricard"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">permord ricard</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="LUCID MEDICAL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">LUCID</div>
+                  <img src="assets/images/brands/sterlite.jpg" alt="sterlite"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">sterlite</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
+                  <img src="assets/images/brands/vodafone_idea.png" alt="vodafone_idea"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">vodafone_idea</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
+                  <img src="assets/images/brands/paysafe.webp" alt="paysafe"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">paysafe</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
+                  <img src="assets/images/brands/stanley.png" alt="Stanley"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">Stanley </div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
-                </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="VALUE ZONE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">VALUE ZONE</div>
+                  <img src="assets/images/brands/pernodricrd.png" alt="permord ricard"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">permord ricard</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="FLOOR DADDY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">FLOOR DADDY</div>
+                  <img src="assets/images/brands/sterlite.jpg" alt="sterlite"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">sterlite</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="Healthy Home Flooring" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">Healthy Home</div>
+                  <img src="assets/images/brands/vodafone_idea.png" alt="vodafone_idea"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">vodafone_idea</div>
                 </div>
                 <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="GOLD'S GYM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">GOLD'S GYM</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="NOVUS CONSTRUCTIONS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">NOVUS</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="M.V.V BUILDERS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">M.V.V BUILDERS</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="AYAANSH INFRASTRUCTURE" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">AYAANSH</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="LUCID MEDICAL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">LUCID</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/carpetking.webp" alt="DIA mall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">DIA mall</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/relaxwell_logo.svg" alt="KIMS-SUNSHINE HOSPITALS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">KIMS-SUNSHINE</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/sri-aishwarya-foods-logo.webp" alt="relaxwell MATTRESSES" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">relaxwell</div>
-                </div>
-                <div class="partner-logo-item">
-                  <img src="https://www.shiftwave.com/images/portfolio/logos/manbhum-logo.webp" alt="VANMPLY" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="logo-placeholder" style="display:none;">VANMPLY</div>
+                  <img src="assets/images/brands/paysafe.webp" alt="paysafe"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="logo-placeholder" style="display:none;">paysafe</div>
                 </div>
               </div>
             </div>
@@ -954,18 +969,19 @@
                       </div>
                       <div class="service-content">
                         <h4 class="title">Organizational Analysis & Development</h4>
-                        <p class="desc">We assess your company’s structure, workflow, and processes to identify bottlenecks and growth opportunities.</p>
+                        <p class="desc">We assess your company’s structure, workflow, and processes to identify
+                          bottlenecks and growth opportunities.</p>
                         <ul class="list-items pt-2 list-items-grid">
-                            <li class="desc"><i class="tji-list"></i>Restructuring</li>
-                            <li class="desc"><i class="tji-list"></i>Performance Mapping</li>
-                            <li class="desc"><i class="tji-list"></i>SOP Creation</li>
-                            <li class="desc"><i class="tji-list"></i>KPI Alignment</li>
-                            <li class="desc"><i class="tji-list"></i>Team Development</li>
-                          </ul> 
+                          <li class="desc"><i class="tji-list"></i>Restructuring</li>
+                          <li class="desc"><i class="tji-list"></i>Performance Mapping</li>
+                          <li class="desc"><i class="tji-list"></i>SOP Creation</li>
+                          <li class="desc"><i class="tji-list"></i>KPI Alignment</li>
+                          <li class="desc"><i class="tji-list"></i>Team Development</li>
+                        </ul>
+                      </div>
+
                     </div>
-                    
-                    </div>
-               
+
                   </div>
                   <div class="service-item style-5 tj-progress-item">
                     <div class="service-content-area">
@@ -974,18 +990,19 @@
                       </div>
                       <div class="service-content">
                         <h4 class="title">Marketing, Branding & Promotions</h4>
-                        <p class="desc">Creating impactful marketing strategies that build strong brands and connect with target audiences across all channels.</p>
+                        <p class="desc">Creating impactful marketing strategies that build strong brands and connect
+                          with target audiences across all channels.</p>
                         <ul class="list-items pt-2 list-items-grid">
-                            <li class="desc"><i class="tji-list"></i>Branding</li>
-                            <li class="desc"><i class="tji-list"></i>Digital Campaigns</li>
-                            <li class="desc"><i class="tji-list"></i>Creative Design</li>
-                            <li class="desc"><i class="tji-list"></i>ATL/BTL Marketing</li>
-                            <li class="desc"><i class="tji-list"></i>Strategic Promotions</li>
-                          </ul>   
+                          <li class="desc"><i class="tji-list"></i>Branding</li>
+                          <li class="desc"><i class="tji-list"></i>Digital Campaigns</li>
+                          <li class="desc"><i class="tji-list"></i>Creative Design</li>
+                          <li class="desc"><i class="tji-list"></i>ATL/BTL Marketing</li>
+                          <li class="desc"><i class="tji-list"></i>Strategic Promotions</li>
+                        </ul>
+                      </div>
+
                     </div>
-              
-                    </div>
-    
+
                   </div>
                   <div class="service-item style-5 tj-progress-item">
                     <div class="service-content-area">
@@ -994,15 +1011,16 @@
                       </div>
                       <div class="service-content">
                         <h4 class="title">Advertising & PR Management</h4>
-                        <p class="desc">Managing brand visibility and reputation through strategic advertising, media relations, and corporate communications.</p>
+                        <p class="desc">Managing brand visibility and reputation through strategic advertising, media
+                          relations, and corporate communications.</p>
                         <ul class="list-items pt-2 list-items-grid">
-                            <li class="desc"><i class="tji-list"></i>Media Planning</li>
-                            <li class="desc"><i class="tji-list"></i>Press Releases</li>
-                            <li class="desc"><i class="tji-list"></i>Corporate Communications</li>
-                            <li class="desc"><i class="tji-list"></i>PR Events</li>
-                          </ul>
+                          <li class="desc"><i class="tji-list"></i>Media Planning</li>
+                          <li class="desc"><i class="tji-list"></i>Press Releases</li>
+                          <li class="desc"><i class="tji-list"></i>Corporate Communications</li>
+                          <li class="desc"><i class="tji-list"></i>PR Events</li>
+                        </ul>
                       </div>
-                     
+
                     </div>
                   </div>
                   <div class="service-item style-5 tj-progress-item">
@@ -1012,14 +1030,15 @@
                       </div>
                       <div class="service-content">
                         <h4 class="title">Influencer & Digital Campaigns</h4>
-                        <p class="desc">Driving engagement and measurable results through influencer collaborations and high-performance digital marketing.</p>
+                        <p class="desc">Driving engagement and measurable results through influencer collaborations and
+                          high-performance digital marketing.</p>
                         <ul class="list-items pt-2 list-items-grid">
-                            <li class="desc"><i class="tji-list"></i>Influencer Collaborations</li>
-                            <li class="desc"><i class="tji-list"></i>Campaign Management</li>
-                            <li class="desc"><i class="tji-list"></i>ROI Tracking</li>
-                          </ul>
+                          <li class="desc"><i class="tji-list"></i>Influencer Collaborations</li>
+                          <li class="desc"><i class="tji-list"></i>Campaign Management</li>
+                          <li class="desc"><i class="tji-list"></i>ROI Tracking</li>
+                        </ul>
                       </div>
-                     
+
                     </div>
                   </div>
                   <div class="service-item style-5 tj-progress-item">
@@ -1029,16 +1048,17 @@
                       </div>
                       <div class="service-content">
                         <h4 class="title">Event Strategy & Handling</h4>
-                        <p class="desc">Delivering end-to-end event solutions from concept to execution, ensuring creativity, precision, and brand impact.</p>
+                        <p class="desc">Delivering end-to-end event solutions from concept to execution, ensuring
+                          creativity, precision, and brand impact.</p>
                         <ul class="list-items pt-2 list-items-grid">
-                            <li class="desc"><i class="tji-list"></i>Corporate Events</li>
-                            <li class="desc"><i class="tji-list"></i>Product Launches</li>
-                            <li class="desc"><i class="tji-list"></i>Exhibitions</li>
-                            <li class="desc"><i class="tji-list"></i>Brand Activations</li>
-                            <li class="desc"><i class="tji-list"></i>Conferences</li>
-                          </ul>
+                          <li class="desc"><i class="tji-list"></i>Corporate Events</li>
+                          <li class="desc"><i class="tji-list"></i>Product Launches</li>
+                          <li class="desc"><i class="tji-list"></i>Exhibitions</li>
+                          <li class="desc"><i class="tji-list"></i>Brand Activations</li>
+                          <li class="desc"><i class="tji-list"></i>Conferences</li>
+                        </ul>
                       </div>
-                     
+
                     </div>
                   </div>
                   <div class="service-item style-5 tj-progress-item">
@@ -1048,15 +1068,16 @@
                       </div>
                       <div class="service-content">
                         <h4 class="title">Sales Growth & Supply Chain Optimization</h4>
-                        <p class="desc">Aligning sales processes and supply chains to boost efficiency, scalability, and business profitability.</p>
+                        <p class="desc">Aligning sales processes and supply chains to boost efficiency, scalability, and
+                          business profitability.</p>
                         <ul class="list-items pt-2 list-items-grid">
-                            <li class="desc"><i class="tji-list"></i>Lead Funnel Design</li>
-                            <li class="desc"><i class="tji-list"></i>Distribution Strategy</li>
-                            <li class="desc"><i class="tji-list"></i>Vendor Optimization</li>
-                            <li class="desc"><i class="tji-list"></i>Logistics Consulting</li>
-                          </ul>
+                          <li class="desc"><i class="tji-list"></i>Lead Funnel Design</li>
+                          <li class="desc"><i class="tji-list"></i>Distribution Strategy</li>
+                          <li class="desc"><i class="tji-list"></i>Vendor Optimization</li>
+                          <li class="desc"><i class="tji-list"></i>Logistics Consulting</li>
+                        </ul>
                       </div>
-                     
+
                     </div>
                   </div>
                 </div>
@@ -1075,305 +1096,329 @@
         </section>
         <!-- end: Service Section -->
 
-                <!-- start: Global Presence Section -->
-                <section class="section-gap pb-0 section-gap-x rounded-0">
-                    <div class="container">
-                      <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-6">
-                          <div class="about-content-area">
-                            <div class="sec-heading style-3">
-                              <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>GLOBAL PRESENCE</span>
-                              <h4 class="sec-title title-anim">Bizvora Consulting operates across India and globally, offering business transformation solutions tailored to regional and cultural nuances.
-                              </h4>
-                            </div>
-                            <div class="about-desc wow fadeInUp" data-wow-delay=".5s">
-                              <p class="desc">We collaborate with clients worldwide to deliver end-to-end consulting, marketing, and organizational frameworks that empower cross-border business growth.</p>
-                              <p class="desc">From organizational structuring to brand development, Bizvora's approach ensures global scalability with local relevance.</p>
-                            </div>
-                            <div class="about-btn-area wow fadeInUp" data-wow-delay=".7s">
-                              <a class="tj-primary-btn" href="contact.html">
-                                <span class="btn-text"><span>Connect With Our Global Team</span></span>
-                                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6">
-                          <div class="about-img-area style-2 wow fadeInRight" data-wow-delay=".3s">
-                            <div class="about-img overflow-hidden">
-                              <img data-speed=".8" src="assets/images/bizvora/img-14.jpeg" alt="Global Presence">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bg-shape-1">
-                      <img src="assets/images/shape/pattern-2.svg" alt="">
-                    </div>
-                    <div class="bg-shape-2">
-                      <img src="assets/images/shape/pattern-3.svg" alt="">
-                    </div>
-                  </section>
-                  <!-- end: Global Presence Section -->
+        <!-- start: Global Presence Section -->
+        <section class="section-gap pb-0 section-gap-x rounded-0">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-lg-6">
+                <div class="about-content-area">
+                  <div class="sec-heading style-3">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>GLOBAL
+                      PRESENCE</span>
+                    <h4 class="sec-title title-anim">Bizvora Consulting operates across India and globally, offering
+                      business transformation solutions tailored to regional and cultural nuances.
+                    </h4>
+                  </div>
+                  <div class="about-desc wow fadeInUp" data-wow-delay=".5s">
+                    <p class="desc">We collaborate with clients worldwide to deliver end-to-end consulting, marketing,
+                      and organizational frameworks that empower cross-border business growth.</p>
+                    <p class="desc">From organizational structuring to brand development, Bizvora's approach ensures
+                      global scalability with local relevance.</p>
+                  </div>
+                  <div class="about-btn-area wow fadeInUp" data-wow-delay=".7s">
+                    <a class="tj-primary-btn" href="contact.html">
+                      <span class="btn-text"><span>Connect With Our Global Team</span></span>
+                      <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                <div class="about-img-area style-2 wow fadeInRight" data-wow-delay=".3s">
+                  <div class="about-img overflow-hidden">
+                    <img data-speed=".8" src="assets/images/bizvora/img-14.jpeg" alt="Global Presence">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: Global Presence Section -->
 
-                <!-- start: Service Section -->
-                <section class="h5-service-section h10-service section-gap">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="sec-heading-wrap style-8">
-                            <div class="heading-wrap-content">
-                              <div class="sec-heading style-3">
-                                <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i> INDUSTRIES WE SERVE
-                                    </span>
-                                <h4 class="sec-title text-anim">Bizvora has worked with 18+ industry sectors, offering tailored consulting and marketing strategies for each:
-                                </h4>
-                              </div>
-                              <div class="btn-area wow fadeInUp" data-wow-delay=".8s">
-                                <a class="tj-primary-btn" href="industries.html">
-                                  <span class="btn-text"><span>Explore More</span></span>
-                                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                </a>
-                              </div>
-                            </div>
+        <!-- start: Service Section -->
+        <section class="h5-service-section h10-service section-gap">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="sec-heading-wrap style-8">
+                  <div class="heading-wrap-content">
+                    <div class="sec-heading style-3">
+                      <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i> INDUSTRIES WE
+                        SERVE
+                      </span>
+                      <h4 class="sec-title text-anim">Bizvora has worked with 18+ industry sectors, offering tailored
+                        consulting and marketing strategies for each:
+                      </h4>
+                    </div>
+                    <div class="btn-area wow fadeInUp" data-wow-delay=".8s">
+                      <a class="tj-primary-btn" href="industries.html">
+                        <span class="btn-text"><span>Explore More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-12">
+                <div class="service-wrapper h10-service-wrapper wow fadeInUp" data-wow-delay=".4s">
+                  <div class="swiper h10-service-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
+                          <h6 class="h10-service-sln">01.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-1"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Manufacturing</h4>
+                            <p class="desc">Driving operational excellence and growth through process optimization,
+                              supply chain efficiency, and strategic market positioning.</p>
                           </div>
                         </div>
                       </div>
-                      <div class="row ">
-                        <div class="col-12">
-                          <div class="service-wrapper h10-service-wrapper wow fadeInUp" data-wow-delay=".4s">
-                            <div class="swiper h10-service-slider">
-                              <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
-                                    <h6 class="h10-service-sln">01.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-1"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Manufacturing</h4>
-                                      <p class="desc">Driving operational excellence and growth through process optimization, supply chain efficiency, and strategic market positioning.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
-                                    <h6 class="h10-service-sln">02.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-2"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Healthcare & Wellness</h4>
-                                      <p class="desc">Enhancing brand trust and patient engagement with innovative healthcare marketing and organizational transformation solutions.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".7s">
-                                    <h6 class="h10-service-sln">03.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-3"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">FMCG & Retail</h4>
-                                      <p class="desc">Boosting sales performance and brand visibility through data-driven retail strategies and consumer-focused marketing campaigns.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
-                                    <h6 class="h10-service-sln">04.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-5"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Education & Training</h4>
-                                      <p class="desc">Helping institutions scale with strategic branding, digital outreach, and operational excellence for lasting educational impact.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
-                                    <h6 class="h10-service-sln">05.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-6"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">IT & Software</h4>
-                                      <p class="desc">Empowering tech businesses with growth consulting, digital positioning, and performance-driven marketing strategies.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".2s">
-                                    <h6 class="h10-service-sln">06.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-1"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Real Estate & Construction</h4>
-                                      <p class="desc">Enabling real estate brands to thrive through market research, investor relations, and impactful property marketing.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
-                                    <h6 class="h10-service-sln">07.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-2"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Logistics & Supply Chain</h4>
-                                      <p class="desc">Optimizing networks and operations with process consulting, digital integration, and market expansion frameworks.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".4s">
-                                    <h6 class="h10-service-sln">08.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-3"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Hospitality & Tourism</h4>
-                                      <p class="desc">Building memorable experiences through creative branding, event strategy, and revenue-focused hospitality consulting.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
-                                    <h6 class="h10-service-sln">09.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-4"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Agriculture & Agro Products</h4>
-                                      <p class="desc">Driving sustainable agri-business growth through supply chain efficiency, branding, and export market strategy.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".6s">
-                                    <h6 class="h10-service-sln">10.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-5"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Fashion & Lifestyle</h4>
-                                      <p class="desc">Creating distinctive lifestyle brands through trend-driven marketing, influencer collaborations, and global visibility.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".7s">
-                                    <h6 class="h10-service-sln">11.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-6"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Finance & Banking</h4>
-                                      <p class="desc">Strengthening financial institutions with digital trust, brand communication, and strategic growth consulting.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".8s">
-                                    <h6 class="h10-service-sln">12.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-1"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Energy & Infrastructure</h4>
-                                      <p class="desc">Powering large-scale projects with strategic communication, stakeholder management, and operational excellence consulting.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".9s">
-                                    <h6 class="h10-service-sln">13.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-2"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Automotive</h4>
-                                      <p class="desc">Accelerating brand recognition and distribution efficiency through innovative marketing and channel optimization.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
-                                    <h6 class="h10-service-sln">14.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-3"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">NGOs & Foundations</h4>
-                                      <p class="desc">Empowering social impact organizations through strategic outreach, fundraising campaigns, and partnership development.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".2s">
-                                    <h6 class="h10-service-sln">15.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-4"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Packaging & Labelling</h4>
-                                      <p class="desc">Helping brands stand out with creative design, strategic positioning, and integrated supply chain consulting.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
-                                    <h6 class="h10-service-sln">16.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-5"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Media & Entertainment</h4>
-                                      <p class="desc">Building visibility and audience engagement with powerful branding, PR, and influencer-led campaigns.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".4s">
-                                    <h6 class="h10-service-sln">17.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-6"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">Ayurveda & Wellness</h4>
-                                      <p class="desc">Promoting holistic wellness brands with authentic storytelling, influencer strategy, and global market expansion.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
-                                    <h6 class="h10-service-sln">18.</h6>
-                                    <div class="service-icon">
-                                      <i class="tji-service-1"></i>
-                                    </div>
-                                    <div class="service-content">
-                                      <h4 class="title">E-Commerce & Startups</h4>
-                                      <p class="desc">Fueling digital-first businesses with growth strategy, brand scaling, and performance-driven marketing solutions.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="swiper-pagination-area"></div>
-                            </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
+                          <h6 class="h10-service-sln">02.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-2"></i>
                           </div>
-          
-          
+                          <div class="service-content">
+                            <h4 class="title">Healthcare & Wellness</h4>
+                            <p class="desc">Enhancing brand trust and patient engagement with innovative healthcare
+                              marketing and organizational transformation solutions.</p>
+                          </div>
                         </div>
-          
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".7s">
+                          <h6 class="h10-service-sln">03.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-3"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">FMCG & Retail</h4>
+                            <p class="desc">Boosting sales performance and brand visibility through data-driven retail
+                              strategies and consumer-focused marketing campaigns.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
+                          <h6 class="h10-service-sln">04.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-5"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Education & Training</h4>
+                            <p class="desc">Helping institutions scale with strategic branding, digital outreach, and
+                              operational excellence for lasting educational impact.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
+                          <h6 class="h10-service-sln">05.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-6"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">IT & Software</h4>
+                            <p class="desc">Empowering tech businesses with growth consulting, digital positioning, and
+                              performance-driven marketing strategies.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".2s">
+                          <h6 class="h10-service-sln">06.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-1"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Real Estate & Construction</h4>
+                            <p class="desc">Enabling real estate brands to thrive through market research, investor
+                              relations, and impactful property marketing.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
+                          <h6 class="h10-service-sln">07.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-2"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Logistics & Supply Chain</h4>
+                            <p class="desc">Optimizing networks and operations with process consulting, digital
+                              integration, and market expansion frameworks.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".4s">
+                          <h6 class="h10-service-sln">08.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-3"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Hospitality & Tourism</h4>
+                            <p class="desc">Building memorable experiences through creative branding, event strategy,
+                              and revenue-focused hospitality consulting.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
+                          <h6 class="h10-service-sln">09.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-4"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Agriculture & Agro Products</h4>
+                            <p class="desc">Driving sustainable agri-business growth through supply chain efficiency,
+                              branding, and export market strategy.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".6s">
+                          <h6 class="h10-service-sln">10.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-5"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Fashion & Lifestyle</h4>
+                            <p class="desc">Creating distinctive lifestyle brands through trend-driven marketing,
+                              influencer collaborations, and global visibility.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".7s">
+                          <h6 class="h10-service-sln">11.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-6"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Finance & Banking</h4>
+                            <p class="desc">Strengthening financial institutions with digital trust, brand
+                              communication, and strategic growth consulting.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".8s">
+                          <h6 class="h10-service-sln">12.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-1"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Energy & Infrastructure</h4>
+                            <p class="desc">Powering large-scale projects with strategic communication, stakeholder
+                              management, and operational excellence consulting.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".9s">
+                          <h6 class="h10-service-sln">13.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-2"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Automotive</h4>
+                            <p class="desc">Accelerating brand recognition and distribution efficiency through
+                              innovative marketing and channel optimization.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
+                          <h6 class="h10-service-sln">14.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-3"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">NGOs & Foundations</h4>
+                            <p class="desc">Empowering social impact organizations through strategic outreach,
+                              fundraising campaigns, and partnership development.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".2s">
+                          <h6 class="h10-service-sln">15.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-4"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Packaging & Labelling</h4>
+                            <p class="desc">Helping brands stand out with creative design, strategic positioning, and
+                              integrated supply chain consulting.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
+                          <h6 class="h10-service-sln">16.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-5"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Media & Entertainment</h4>
+                            <p class="desc">Building visibility and audience engagement with powerful branding, PR, and
+                              influencer-led campaigns.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".4s">
+                          <h6 class="h10-service-sln">17.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-6"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">Ayurveda & Wellness</h4>
+                            <p class="desc">Promoting holistic wellness brands with authentic storytelling, influencer
+                              strategy, and global market expansion.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
+                          <h6 class="h10-service-sln">18.</h6>
+                          <div class="service-icon">
+                            <i class="tji-service-1"></i>
+                          </div>
+                          <div class="service-content">
+                            <h4 class="title">E-Commerce & Startups</h4>
+                            <p class="desc">Fueling digital-first businesses with growth strategy, brand scaling, and
+                              performance-driven marketing solutions.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </section>
-                  <!-- end: Service Section -->
+                    <div class="swiper-pagination-area"></div>
+                  </div>
+                </div>
 
-                
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- end: Service Section -->
+
+
         <!-- start: Testimonial Section -->
         <section class="h8-testimonial section-gap pt-0">
           <div class="container">
@@ -1396,9 +1441,12 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="testimonial-item">
-                          
+
                           <div class="desc">
-                            <p>Bizvora's organizational analysis and development services transformed our company structure. Their team identified critical bottlenecks in our workflow and implemented SOPs that improved our efficiency by 40%. The strategic restructuring they recommended has been instrumental in scaling our operations across multiple locations.</p>
+                            <p>Bizvora's organizational analysis and development services transformed our company
+                              structure. Their team identified critical bottlenecks in our workflow and implemented SOPs
+                              that improved our efficiency by 40%. The strategic restructuring they recommended has been
+                              instrumental in scaling our operations across multiple locations.</p>
                           </div>
                           <div class="testimonial-author">
                             <div class="author-inner">
@@ -1413,7 +1461,10 @@
                       <div class="swiper-slide">
                         <div class="testimonial-item">
                           <div class="desc">
-                            <p>Working with Bizvora on our marketing and branding strategy has been exceptional. They created a comprehensive digital campaign that increased our brand visibility by 300% and connected us with our target audience effectively. Their creative approach to ATL and BTL marketing has significantly boosted our market presence.
+                            <p>Working with Bizvora on our marketing and branding strategy has been exceptional. They
+                              created a comprehensive digital campaign that increased our brand visibility by 300% and
+                              connected us with our target audience effectively. Their creative approach to ATL and BTL
+                              marketing has significantly boosted our market presence.
                             </p>
                           </div>
                           <div class="testimonial-author">
@@ -1428,9 +1479,12 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="testimonial-item">
-                          
+
                           <div class="desc">
-                            <p>Bizvora managed our product launch event from concept to execution flawlessly. Their attention to detail, vendor coordination, and creative execution exceeded our expectations. The event generated significant media coverage and helped us establish a strong market presence. Their end-to-end event management expertise is truly commendable.
+                            <p>Bizvora managed our product launch event from concept to execution flawlessly. Their
+                              attention to detail, vendor coordination, and creative execution exceeded our
+                              expectations. The event generated significant media coverage and helped us establish a
+                              strong market presence. Their end-to-end event management expertise is truly commendable.
                             </p>
                           </div>
                           <div class="testimonial-author">
@@ -1445,9 +1499,13 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="testimonial-item">
-                          
+
                           <div class="desc">
-                            <p>The supply chain optimization consulting from Bizvora revolutionized our distribution network. They redesigned our logistics framework, optimized vendor relationships, and implemented a lead funnel that increased our sales conversion by 35%. Their data-driven approach to sales strategy and supply chain management has been a game-changer for our business growth.
+                            <p>The supply chain optimization consulting from Bizvora revolutionized our distribution
+                              network. They redesigned our logistics framework, optimized vendor relationships, and
+                              implemented a lead funnel that increased our sales conversion by 35%. Their data-driven
+                              approach to sales strategy and supply chain management has been a game-changer for our
+                              business growth.
                             </p>
                           </div>
                           <div class="testimonial-author">
@@ -1462,9 +1520,12 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="testimonial-item">
-                          
+
                           <div class="desc">
-                            <p>Bizvora's influencer marketing campaigns and digital strategies have significantly enhanced our brand's online presence. Their ability to connect us with the right influencers and track ROI has been impressive. Over the past two years, they've helped us build a strong digital footprint and engage with our target audience effectively.
+                            <p>Bizvora's influencer marketing campaigns and digital strategies have significantly
+                              enhanced our brand's online presence. Their ability to connect us with the right
+                              influencers and track ROI has been impressive. Over the past two years, they've helped us
+                              build a strong digital footprint and engage with our target audience effectively.
                             </p>
                           </div>
                           <div class="testimonial-author">
@@ -1517,11 +1578,11 @@
   <script src="assets/js/main.js"></script>
   <script>
     // Prevent default navigation for Get Started button
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Prevent default navigation for Get Started button
       const getStartedBtn = document.querySelector('[data-bs-target="#contactModal"]');
       if (getStartedBtn) {
-        getStartedBtn.addEventListener('click', function(e) {
+        getStartedBtn.addEventListener('click', function (e) {
           e.preventDefault();
         });
       }
