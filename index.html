@@ -266,6 +266,137 @@
     }
 
     /* Contact Modal Styling */
+
+    /* Gallery Section */
+    .tj-gallery-section {
+      background-color: #f8f9fa;
+    }
+
+    .gallery-viewer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Main image */
+    .gallery-main-wrap {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 500px;
+      width: 100%;
+    }
+
+    .gallery-main-wrap a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .gallery-main-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #ffffff;
+      padding: 30px;
+      transition: transform 0.5s ease, opacity 0.35s ease;
+    }
+
+    .gallery-main-wrap:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-main-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-main-wrap:hover .gallery-main-overlay {
+      opacity: 1;
+    }
+
+    .gallery-main-overlay i {
+      font-size: 36px;
+      color: #fff;
+    }
+
+    /* Thumbnail strip at bottom — horizontal scroll */
+    .gallery-thumb-scroll {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 4px;
+      scroll-behavior: smooth;
+    }
+
+    .gallery-thumb-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .gallery-thumb-scroll::-webkit-scrollbar-track {
+      background: #e9ecef;
+      border-radius: 2px;
+    }
+
+    .gallery-thumb-scroll::-webkit-scrollbar-thumb {
+      background: var(--tj-color-theme-primary, #e74c3c);
+      border-radius: 2px;
+    }
+
+    .gallery-thumb-item {
+      flex-shrink: 0;
+      width: 140px;
+      height: 95px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 3px solid transparent;
+      transition: border-color 0.25s ease;
+    }
+
+    .gallery-thumb-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #ffffff;
+      padding: 8px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-thumb-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-thumb-item.active {
+      border-color: var(--tj-color-theme-primary, #e74c3c);
+    }
+
+    /* Fade transition on main image swap */
+    .gallery-main-wrap img.fading {
+      opacity: 0;
+    }
+
+    @media (max-width: 767px) {
+      .gallery-main-wrap {
+        height: 280px;
+      }
+
+      .gallery-thumb-item {
+        width: 100px;
+        height: 70px;
+      }
+    }
   </style>
 </head>
 
@@ -1560,6 +1691,80 @@
         <!-- end: Service Section -->
 
 
+        <!-- start: Gallery Section -->
+        <section class="tj-gallery-section section-gap section-gap-x rounded-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-wrap-content">
+                  <div class="sec-heading style-4">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>OUR GALLERY</span>
+                    <h4 class="sec-title title-anim">A Glimpse Into Our Work & Impact</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-viewer wow fadeInUp" data-wow-delay=".3s">
+              <!-- Main Image -->
+              <div class="gallery-main-wrap">
+                <a href="assets/images/brands/paysafe.webp" class="gallery" data-gall="gallery-group" id="gallery-main-link">
+                  <img src="assets/images/brands/paysafe.webp" alt="Paysafe" id="gallery-main-img">
+                  <div class="gallery-main-overlay"><i class="fa-regular fa-magnifying-glass-plus"></i></div>
+                </a>
+              </div>
+              <!-- Thumbnails at bottom -->
+              <div class="gallery-thumb-scroll" id="gallery-thumb-scroll">
+                <div class="gallery-thumb-item active" data-img="assets/images/brands/paysafe.webp" data-index="0">
+                  <img src="assets/images/brands/paysafe.webp" alt="Paysafe">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/stanley.png" data-index="1">
+                  <img src="assets/images/brands/stanley.png" alt="Stanley">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/vodafone_idea.png" data-index="2">
+                  <img src="assets/images/brands/vodafone_idea.png" alt="Vodafone Idea">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/pernodricrd.png" data-index="3">
+                  <img src="assets/images/brands/pernodricrd.png" alt="Pernod Ricard">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/indian-oil.png" data-index="4">
+                  <img src="assets/images/brands/indian-oil.png" alt="Indian Oil">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/jivalogics.png" data-index="5">
+                  <img src="assets/images/brands/jivalogics.png" alt="Jivalogics">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/kubera-silks.jpg" data-index="6">
+                  <img src="assets/images/brands/kubera-silks.jpg" alt="Kubera Silks">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/nvr.png" data-index="7">
+                  <img src="assets/images/brands/nvr.png" alt="Nallamalli NVR">
+                </div>
+                <div class="gallery-thumb-item" data-img="assets/images/brands/onus-hospital.png" data-index="8">
+                  <img src="assets/images/brands/onus-hospital.png" alt="Onus Hospital">
+                </div>
+              </div>
+            </div>
+            <!-- Hidden links for VenoBox gallery navigation -->
+            <div style="display:none;" id="gallery-hidden-links">
+              <a href="assets/images/brands/paysafe.webp" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/stanley.png" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/vodafone_idea.png" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/pernodricrd.png" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/indian-oil.png" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/jivalogics.png" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/kubera-silks.jpg" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/nvr.png" class="gallery" data-gall="gallery-group"></a>
+              <a href="assets/images/brands/onus-hospital.png" class="gallery" data-gall="gallery-group"></a>
+            </div>
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: Gallery Section -->
+
         <!-- start: Testimonial Section -->
         <section class="h8-testimonial section-gap pt-0">
           <div class="container">
@@ -1715,16 +1920,69 @@
   <script src="assets/js/appear.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/meanmenu.js"></script>
-  <script src="assets/js/magiccursor.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     // Prevent default navigation for Get Started button
     document.addEventListener('DOMContentLoaded', function () {
-      // Prevent default navigation for Get Started button
       const getStartedBtn = document.querySelector('[data-bs-target="#contactModal"]');
       if (getStartedBtn) {
         getStartedBtn.addEventListener('click', function (e) {
           e.preventDefault();
+        });
+      }
+    });
+  </script>
+
+  <script>
+    // Gallery: thumbnail click updates main image with fade + auto-scroll active thumb into view
+    document.addEventListener('DOMContentLoaded', function () {
+      var mainImg = document.getElementById('gallery-main-img');
+      var mainLink = document.getElementById('gallery-main-link');
+      var thumbItems = document.querySelectorAll('.gallery-thumb-item');
+      var hiddenLinks = document.querySelectorAll('#gallery-hidden-links a');
+
+      if (!mainImg || !thumbItems.length) return;
+
+      thumbItems.forEach(function (thumb) {
+        thumb.addEventListener('click', function () {
+          var imgSrc = this.getAttribute('data-img');
+          var idx = parseInt(this.getAttribute('data-index'), 10);
+
+          // Fade out
+          mainImg.classList.add('fading');
+
+          setTimeout(function () {
+            // Swap src and link
+            mainImg.src = imgSrc;
+            mainImg.alt = 'Gallery Image ' + (idx + 1);
+            if (mainLink) mainLink.href = imgSrc;
+
+            // Fade back in
+            mainImg.classList.remove('fading');
+          }, 320);
+
+          // Update active thumb
+          thumbItems.forEach(function (t) { t.classList.remove('active'); });
+          this.classList.add('active');
+
+          // Auto-scroll active thumb into view
+          this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        });
+      });
+
+      // Main image click opens VenoBox at the correct index
+      if (mainLink) {
+        mainLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          var currentSrc = mainImg.src;
+          // Find matching hidden link and trigger it
+          hiddenLinks.forEach(function (link) {
+            var linkHref = link.href.split('/').pop();
+            var currentFile = currentSrc.split('/').pop();
+            if (linkHref === currentFile) {
+              link.click();
+            }
+          });
         });
       }
     });
