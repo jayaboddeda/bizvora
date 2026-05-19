@@ -170,12 +170,51 @@
     });
   }
 
+  /**
+   * Inject a floating WhatsApp button directly into <body>.
+   * Appending to body (not a component placeholder) ensures position:fixed
+   * is relative to the viewport, not a transformed ancestor.
+   */
+  function loadWhatsAppButton() {
+    if (document.querySelector('.whatsapp-float')) {
+      return;
+    }
+
+    var style = document.createElement('style');
+    style.textContent =
+      '.whatsapp-float{position:fixed;right:25px;bottom:25px;width:56px;height:56px;' +
+      'background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;' +
+      'justify-content:center;font-size:30px;z-index:9999;' +
+      'box-shadow:0 4px 14px rgba(0,0,0,.25);' +
+      'transition:transform .25s ease,box-shadow .25s ease;' +
+      'animation:whatsapp-pulse 2s infinite;}' +
+      '.whatsapp-float:hover{color:#fff;transform:scale(1.1);' +
+      'box-shadow:0 6px 20px rgba(0,0,0,.35);}' +
+      '@keyframes whatsapp-pulse{' +
+      '0%{box-shadow:0 4px 14px rgba(0,0,0,.25),0 0 0 0 rgba(37,211,102,.6);}' +
+      '70%{box-shadow:0 4px 14px rgba(0,0,0,.25),0 0 0 16px rgba(37,211,102,0);}' +
+      '100%{box-shadow:0 4px 14px rgba(0,0,0,.25),0 0 0 0 rgba(37,211,102,0);}}' +
+      '@media (max-width:575px){.whatsapp-float{right:16px;bottom:16px;' +
+      'width:50px;height:50px;font-size:26px;}}';
+    document.head.appendChild(style);
+
+    var link = document.createElement('a');
+    link.href = 'https://wa.me/918500888238';
+    link.className = 'whatsapp-float';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.setAttribute('aria-label', 'Chat with us on WhatsApp');
+    link.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
+    document.body.appendChild(link);
+  }
+
   // Auto-load components when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       loadHeader();
       loadFooter();
-      
+      loadWhatsAppButton();
+
       // Auto-load contact section if placeholder exists
       if (document.querySelector('#contact-section-placeholder')) {
         loadContactSection();
@@ -190,7 +229,8 @@
     // DOM is already ready
     loadHeader();
     loadFooter();
-    
+    loadWhatsAppButton();
+
     // Auto-load contact section if placeholder exists
     if (document.querySelector('#contact-section-placeholder')) {
       loadContactSection();
@@ -209,6 +249,7 @@
     loadFooter: loadFooter,
     loadContactSection: loadContactSection,
     loadContactModal: loadContactModal,
+    loadWhatsAppButton: loadWhatsAppButton,
     setActiveMenuItem: setActiveMenuItem
   };
 
