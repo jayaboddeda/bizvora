@@ -53,19 +53,20 @@
    * Set active menu item based on current page
    */
   function setActiveMenuItem() {
-    // Get current page filename
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Define solution detail pages
+    // Get current page as an extensionless name (clean URLs).
+    // '/about' -> 'about', '/about.html' -> 'about', '/' or '' -> 'index'
+    const currentPage = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
+
+    // Define solution detail pages (extensionless to match clean URLs)
     const solutionDetailPages = [
-      'strategic-documentation.html',
-      'political-strategy-research.html',
-      'digital-traditional-marketing.html',
-      'marketing-branding-solutions.html',
-      'organizational-analysis-development.html',
-      'strategic-consulting-excellence.html',
-      'manufacturing-business-setup.html',
-      'supply-chain-management-systems.html'
+      'strategic-documentation',
+      'political-strategy-research',
+      'digital-traditional-marketing',
+      'marketing-branding-solutions',
+      'organizational-analysis-development',
+      'strategic-consulting-excellence',
+      'manufacturing-business-setup',
+      'supply-chain-management-systems'
     ];
     
     // Check if current page is a solution detail page
@@ -87,18 +88,16 @@
         item.classList.remove('current-menu-item', 'current-menu-ancestor');
         
         // If on a solution detail page, highlight Solutions menu as ancestor
-        if (isSolutionDetailPage && href === 'solutions.html') {
+        if (isSolutionDetailPage && href === 'solutions') {
           item.classList.add('current-menu-ancestor');
         }
-        // If on solutions.html itself, highlight as current item
-        else if (currentPage === 'solutions.html' && href === 'solutions.html') {
+        // If on the solutions page itself, highlight as current item
+        else if (currentPage === 'solutions' && href === 'solutions') {
           item.classList.add('current-menu-item');
         }
         // Check if this link matches current page exactly (for other pages)
-        else if (href === currentPage || 
-            (currentPage === '' && href === 'index.html') ||
-            (currentPage === 'index.html' && href === 'index.html') ||
-            (currentPage.includes('index') && href === 'index.html')) {
+        else if (href === currentPage ||
+            (currentPage === 'index' && href === 'index')) {
           item.classList.add('current-menu-item');
         }
       });
@@ -112,9 +111,9 @@
     loadComponent('components/header.html', '#header-placeholder', function() {
       console.log('Header loaded successfully');
       
-      // Add h9-header class only on index.html
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      if (currentPage === 'index.html' || currentPage === '') {
+      // Add h9-header class only on the homepage
+      const currentPage = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
+      if (currentPage === 'index') {
         const mainHeader = document.querySelector('.header-area:not(.header-duplicate)');
         if (mainHeader) {
           mainHeader.classList.add('h9-header');
